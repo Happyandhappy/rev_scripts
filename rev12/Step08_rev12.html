@@ -660,6 +660,7 @@
                         <h4 class="lbl">GETTING LBL ON THE PHONE</h4>
                         <h4 class="amer">GETTING COMPANY ON THE PHONE</h4>
                         <h4 class="west">GETTING COMPANY ON THE PHONE</h4>
+                        <h4 class="occ">GETTING OCC ON THE PHONE</h4>
                         <p></p>
                         <p style="padding:0;margin:0;color:#000000;font-size:11pt;;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
                             <span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;;font-style:normal"></span>
@@ -668,9 +669,10 @@
                             <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;;font-style:normal">
                                 Now, the next step is getting on the phone with 
                                 <span class="rna">Royal Neighbors of America</span>
-                            <span class="balt">Baltimore Life</span>
-                            <span class="lbl">Liberty Bankers Life</span>
-                            <span class="amer">American General</span> and getting you medically approved for coverage. Once you are approved, they are going to mail you a policy and your member benefits package. You'll be able to sit down and look it
+                                <span class="balt">Baltimore Life</span>
+                                <span class="lbl">Liberty Bankers Life</span>
+                                <span class="amer">American General</span>
+                                <span class="occ">Occidental Life</span> and getting you medically approved for coverage. Once you are approved, they are going to mail you a policy and your member benefits package. You'll be able to sit down and look it
                             over to make sure everything is in order. I'm going to give you a call to check in to make sure all of your questions are answered, and then your coverage will begin on
                             <!--<input type="text" control="input " field-name="Draft Date" name="Draft Date" value="(#Draft Date#)">.-->
                             <input type="date" field-name="Draft Date" name="Draft Date" value="(#Draft Date#)">.
@@ -692,7 +694,8 @@
                                 <span class="rna">Royal Neighbors of America</span>
                             <span class="balt">Baltimore Life</span>
                             <span class="lbl">Liberty Bankers Life</span>
-                            <span class="amer">American General</span> is in two parts. The first part is just for me, but listen closely. Don’t be afraid to speak up if you hear something wrong. After that, they are going to confirm with you that everything
+                            <span class="amer">American General</span>
+                            <span class="occ">Occidental Life</span> is in two parts. The first part is just for me, but listen closely. Don’t be afraid to speak up if you hear something wrong. After that, they are going to confirm with you that everything
                             I said is correct and then conduct your health interview. Now, looking at your health information you are going to be able to answer “NO” to
                             </span>
                             <span style="font-size:12pt;color:#ff0000">(all or most of)</span>
@@ -758,7 +761,7 @@
 </html>
 
 <style type="text/css">
-.col-sm-12, .col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4, .col-sm-3,.col-sm-2,.col-sm-1{
+    .col-sm-12, .col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4, .col-sm-3,.col-sm-2,.col-sm-1{
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -1433,7 +1436,7 @@
 
 <script type="text/javascript">
    function hideTags() {
-        var names = ['rna', 'balt', 'lbl', 'amer', 'west'];
+        var names = ['rna', 'balt', 'lbl', 'amer', 'west', 'occ'];
         for (var i = 0; i < names.length; i++) {
             var tags = document.getElementsByClassName(names[i]);
             for (var j = 0; j < tags.length; j++)
@@ -1478,7 +1481,22 @@
         document.getElementsByClassName('plan')[0].value = selects[1].value;
 
         hideTags();
-        if (company == 'Royal Neighbors of America') {
+        var mappings = {
+            "Royal Neighbors of America": "rna",
+            "Baltimore Life": "balt",
+            "Liberty Bankers Life": "lbl",
+            "American General": "amer",
+            "Great Western": "west",
+            "Occidental Life": "occ",
+        }
+
+        if (company  in mappings){
+            tags = document.getElementsByClassName(mappings[company]);
+            for (j = 0; j < tags.length; j++)
+                tags[j].style.display = 'inline-block';
+        }
+
+        /*if (company == 'Royal Neighbors of America') {
             tags = document.getElementsByClassName('rna');
             for (j = 0; j < tags.length; j++)
                 tags[j].style.display = 'inline-block';
@@ -1500,7 +1518,7 @@
             tags = document.getElementsByClassName('west');
             for (j = 0; j < tags.length; j++)
                 tags[j].style.display = 'inline-block';
-        }
+        }*/
     }
 
     function setSoldAgents(){
