@@ -654,6 +654,7 @@
                 </div>
                 <div class="bar_top"></div>
                 <div class="col-sm-12 rightbody">
+
                     <div id="gatherinfo_amer">
                         <h4 style="padding-bottom: 10px;">GATHER INFORMATION &amp; BANKING (AIG and GW ONLY!)</h4>
                         <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
@@ -1262,6 +1263,262 @@
                             <br>
                         </p>
                     </div>
+
+                    <!-- gather information for OCC -->
+                    <div id="gatherinfo_occ">
+                        <h4 style="padding-bottom: 10px;">GATHER INFORMATION &amp; BANKING (OCC)</h4>
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Gather and confirm the following information. Make sure you have everything spelled right.</span>
+                        </p>
+
+                        <!-- Address -->
+                        <p style="padding:10px 0px 0px 35px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Complete Address:</strong>
+                                <input type="text" control="input " field-name="Address" name="Address" value="(#Address#)">
+                            </span>
+                        </p>
+
+                        <!-- Address 2 -->
+                        <p style="padding:10px 0px 0px 98px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Address 2:</strong>
+                                <input type="text" control="input " field-name="Address" name="Address2" value="(#Address2#)">
+                            </span>
+                        </p>
+
+                        <!-- City -->
+                        <p style="padding:0px 0px 0px 35px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>City:</strong>
+                                <input type="text" control="input " field-name="City" name="City" value="(#City#)">
+                            </span>
+                        </p>
+                        
+                        <!-- State -->
+                        <p style="padding:0px 0px 0px 33px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>State:</strong>
+                                <input type="text" control="input " field-name="State" name="State" value="(#State#)">
+                            </span>
+                        </p>
+                        
+                        <!-- Zip -->
+                        <p style="padding:0px 0px 0px 34px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Zip:</strong>
+                                <input type="text" control="input " field-name="ZipCode" name="ZipCode" value="(#ZipCode#)">
+                            </span>
+                        </p>
+                        
+                        <!-- Date of birth -->
+                        <p style="padding:0px 0px 0px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Date of birth:</strong>
+                                <!--<input type="text" control="input " field-name="Date of Birth" name="Date of Birth" value="(#Date of Birth#)">-->
+                                <input type="date" field-name="Date of Birth" name="Date of Birth" value="(#Date of Birth#)">
+                            </span>
+                        </p>
+                        
+                        <!-- Confirm Phone Number -->
+                        <p style="padding:0px 0px 0px 27px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                <strong>Confirm phone number:</strong>
+                                <input type="text" control="input " field-name="PrimaryPhone" name="PrimaryPhone" value="(#PrimaryPhone#)">
+                            </span>
+                        </p>
+                        
+                        <!-- Height -->
+                        <p style="padding:0px 0px 0px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Height:</strong>
+                                <input type="text" control="input " field-name="Height" name="Height" value="(#Height#)">
+                            </span>
+                        </p>
+
+                        <!-- Weight -->
+                        <p style="padding:0px 0px 10px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Weight:</strong>
+                                <input type="text" control="input " field-name="Weight" name="Weight" value="(#Weight#)">
+                            </span>
+                        </p>                        
+                        <br>
+
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Confirm Company / Plan / Monthly Premium Amount / Policy Start Date: This will be in the welcome kit IT MUST BE RIGHT</span>
+                        </p>
+
+                        <!-- Product -->
+                        <p style="padding:10px 0px 0px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color: #ff0000;">***</span>Product:</strong>
+                            <select field-name="Carrier Product 2" name="Carrier Product 2">
+                                <option value="(#Carrier Product 2#)" selected="" hidden="">(#Carrier Product 2#)</option>
+                                <option value="Royal Neighbors of America">Royal Neighbors of America</option>
+                                <option value="Baltimore Life">Baltimore Life</option>
+                                <option value="Liberty Bankers Life">Liberty Bankers Life</option>
+                                <option value="American General">American General</option>
+                                <option value="Great Western">Great Western</option>
+                                <option value="Occidental Life">Occidental Life</option>
+                                <!--<option value="Foresters">Foresters</option>-->
+                                <!--<option value="Prosperity">Prosperity</option>-->
+                                <!--<option value="5Star Life">5Star Life</option>-->
+                            </select>
+                            <select field-name="Plan" name="Plan">
+                            </select>
+                            </span>
+                        </p>
+
+                        <!-- Face amount -->
+                        <p style="padding:0px 0px 0px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color: #ff0000;">***</span>Face Amount:</strong>
+                            <input type="text" control="input " field-name="Face Amount" name="Face Amount" value="(#Face Amount#)">
+                            </span>
+                        </p>
+
+                        <!-- Premium -->
+                        <p style="padding:0px 0px 10px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color: #ff0000;">***</span>Premium:</strong>
+                            <input type="number" step="0.01" control="input " field-name="Premium" name="Premium" value="(#Premium#)" autocomplete="off">
+                            </span>
+                        </p>
+                        <br>
+
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-size:12pt;">Now as your advocate, I will set this to draft each month in a way that will make sure it never hurts you by coming out on a weird day. So what we're going to do is set these payments to come out each month on the day that you get your Social Security payment/Disability payment/Paycheck. When does that happen for you?</span>
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                        </p>
+                        <br>
+
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-size:12pt;">Now (#Preferred Name#), this policy starts when you make your first payment.</span>
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                        </p>
+
+                        <p style="padding:10px 0px 10px 30px;">
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>First Draft:</strong>
+                                <!--<input type="text" control="input " field-name="Draft Date" name="Draft Date" value="(#Draft Date#)">-->
+                                <input type="date" field-name="Draft Date" name="Draft Date" value="(#Draft Date#)">
+                            </span>
+                        </p>
+
+                        <p>
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                And it will be the <input type="text" control="input " field-name="Future Draft Date" name="Future Draft Date" value="(#Future Draft Date#)"> day of the month every month thereafter.
+                                </span>
+                        </p>
+                        <br>
+                        <p>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>DRAFT DATES must coincide with SS/Disability Payments.</span>
+                        </p>
+                        <br>
+                        <p>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>INITIAL &amp; SUBSEQUENT DRAFT DATES MUST BE THE SAME</span>
+                        </p>
+                        <br>
+                        <p>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>Acceptable Draft Dates - 1st / 3rd / 15th / 2nd Wednesday / 3rd Wednesday / 4th Wednesday</span>
+                        </p>
+                        <br>
+
+                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                            <span style="font-size:12pt;">Now (#Preferred Name#), I need to read a couple of disclosures for you, and then we’ll finish up and get on the phone with Occidental Life. Now the first one is the</span>
+                            <span style="font-size:12pt;font-weight:700">Voice Signature Authorization</span>.
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"> Make sure you speak clearly for the legal recording OK?</span>
+                        </p>
+                        <br>
+                        <p>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>Right <strong>HERE</strong> you need to alert your UW Support Chat if you need Closing Assistance</span>
+                        </p>
+                        <br>
+
+                        <p style="padding:10px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:center">
+                            <span style="-webkit-text-decoration-skip:none;color:#000000;font-weight:700;vertical-align:baseline;text-decoration-skip-ink:none;font-size:12pt;font-style:normal">American Legacy: Voice Signature Script</span>
+                        </p>
+
+                        <br />
+                        <p>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;">
+                                <strong>NOTE: Record the following with the proposed insured for each application (Proposed Insured is 18 years of age or older): </strong>
+                            </span>
+                        </p>
+                        <br />
+
+                        <p>
+                            Mr./Mrs. (Last Name) as a final step to completing the application process, I need you to please verify the following: 
+                        </p>
+                        <ul>
+                            <li class="opt">
+                                Please state your full name and today’s date. 
+                            </li>
+                            <li class="opt">
+                                Do you understand that you have applied for an American Legacy Whole Life Final Expense Insurance policy through Occidental Life Insurance Company (hereafter referred to as Occidental)? 
+                            </li>
+                            <li class="opt">
+                                Do you understand that the American Legacy policy is separate from any other insurance policy that you may have been presented?
+                            </li>
+                            <li class="opt">
+                                Do you acknowledge that the application for insurance with Occidental was completed over the telephone and that you were not in the presence of the licensed insurance agent who sold you this policy?
+                            </li>
+                            <li class="opt">
+                                Do you agree that answers and statements you have provided while completing your application are true, complete and correctly recorded to the best of your knowledge and belief? 
+                            </li>
+                            <li class="opt">
+                                Do you acknowledge that you have received and read all of the following items or they have been read to you:
+                                    <p><strong>o&nbsp; </strong> Copy of your application</p>
+                                    <p><strong>o&nbsp; </strong> Conditional Receipt (If applicable) </p>
+                                    <p><strong>o&nbsp; </strong> Copy of the Fair Credit Reporting Act Notice and MIB Pre-Notice</p>
+                                    <p><strong>o&nbsp; </strong> Terminal Illness Accelerated Benefit Rider Disclosure Statement</p>
+                                    <p><strong>o&nbsp; </strong> Accelerated Benefit Rider – Confined Care Disclosure Statement (only on Immediate Death Benefit Plan)</p>
+                            </li>
+                            <li class="opt">
+                                Do you understand that a copy of your completed application will be provided as part of your policy contract, if issued?
+                            </li>
+                            <li class="opt">
+                                Do you understand that a copy of your completed application will be provided as part of your policy contract, if issued?
+                            </li>
+                            <li class="opt">
+                                Do you authorize Occidental to obtain and disclose protected health information including prescription history for the purpose of determining eligibility for insurance from any pharmacy, any pharmacy benefit manager, the MIB, Inc. and do you authorize said entities to furnish such information to Occidental for the purpose of evaluating your application for insurance?
+                            </li>
+                            <li class="opt">
+                                Health information obtained will not be re-disclosed without your authorization unless permitted by law, in which case it may not be protected under Federal Privacy Rules. This authorization shall be valid for two years from this date and may be revoked by sending written notice to Occidental. 
+                            </li>
+                            <li class="opt">
+                                Do you agree to Occidental accepting your signature electronically through voice recording and do you understand that by stating ‘yes’ you are signing the application electronically just as if you had signed a paper application? 
+                            </li>
+                        </ul>
+                        <br>
+                        <p>
+                            Thank you very much for your application. It will now be submitted to the Home Office for consideration for approval. 
+                        </p>
+                        <br />
+                        <p>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;">
+                                <strong>NOTE: Record the following <span class="italic">only if someone other than the proposed insured</span> will be owner of the policy: </strong>
+                            </span>
+                        </p>
+                        <br />
+                        <ul>
+                            <li class="opt">
+                                Please state your name and your relationship to the individual applying for life insurance. 
+                            </li>
+                            <li class="opt">
+                                Please state your name and your relationship to the individual applying for life insurance. 
+                            </li>
+                            <li class="opt">
+                                Is it your intent to be the owner of this policy? 
+                                Yes or no.
+                            </li>
+                            <li class="opt">
+                                Is it your intent for this recording to represent your signature? Yes or no.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END OCC -->
                 </div>
                 <div class="bar_bottom">
                     <a class="btn button submit" onclick="save();">SAVE</a>
@@ -1946,6 +2203,19 @@
     }
     .divider{
         height: 20px;
+    }
+
+    li.opt{
+        padding: 3px;
+        font-size: 12pt;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .underline{
+        text-decoration: underline;
     }
 </style>
 
