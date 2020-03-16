@@ -298,6 +298,7 @@
                                                     <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                                     <option value="American General">American General</option>
                                                     <option value="Great Western">Great Western</option>
+                                                    <option value="Occidental Life">Occidental Life</option>
                                                     <!--<option value="Foresters">Foresters</option>-->
                                                     <!--<option value="Prosperity">Prosperity</option>-->
                                                     <!--<option value="5Star Life">5Star Life</option>-->
@@ -681,6 +682,7 @@
                                         <option value="Liberty Bankers Life">Liberty Bankers Life</option>
                                         <option value="American General">American General</option>
                                         <option value="Great Western">Great Western</option>
+                                        <option value="Occidental Life">Occidental Life</option>
                                         <!--<option value="Foresters">Foresters</option>-->
                                         <!--<option value="Prosperity">Prosperity</option>-->
                                         <!--<option value="5Star Life">5Star Life</option>-->
@@ -1231,6 +1233,58 @@
                                 <!-- End Close -->
                             </div>
                             <!-- End Great Western -->
+
+                            <!-- Occidental Life -->
+                            <div class="occi_life">
+                                <h4>DESCRIPTION OF Occidental Life</h4>
+                                <p></p>
+                                <p>
+                                    <span style="font-size:12pt;">
+                                        The name of the company I’m going to recommend for you is Occidental Life. They were established in 1910 and carry an A Rating. Now, <strong>(Client Name)</strong> how many companies can you think of from the <span style="font-style: italic;margin-right: 2px;">Early 1900s</span> that are carrying A Ratings? What does that say to <strong style="font-style: italic;margin-right: 2px;">YOU</strong>?
+                                    </span>
+                                </p>
+                                <br />
+                                <p style="font-size:12pt;color:#ff0000;font-style: italic;">
+                                    <strong>NOTE: </strong>
+                                        This is a question, let them answer.
+                                </p>
+                                <br />
+                                <p>
+                                    That's right!  We're lucky to have offers from such a rare company, and they do have an excellent reputation for doing business the <strong>RIGHT WAY</strong>, over a long period of time.  You won't find any complaints about them, in their entire 110 year history, that they haven't answered and resolved.
+                                </p>
+                                <br>
+                                <p>
+                                    That's why I really do love doing business with Occidental Life.  To be honest, I love the way that they <strong>do</strong> business. Occidental Life is <strong class="italic underline">NOT</strong> one of these companies that you may have seen on TV who say ridiculous things like "No health Questions asked..." or, "Three Simple Health Questions and Everybody is Approved!" Have you seen those commercials on tv, <strong>(#Preferred Name#)</strong>?
+                                </p>
+                                <br />
+                                <p style="font-size:12pt;color:#ff0000;font-style: italic;">
+                                    <strong>NOTE: </strong>
+                                        This is a question, let them answer.
+                                </p>
+                                <br />
+
+                                <p>
+                                    Well, <strong>(#Preferred Name#)</strong>, what <strong class="italic">those</strong> companies don't tell people is that they basically approve <strong class="italic underline">everybody</strong>, but when the time comes and their customer actually passes away, <strong>THAT</strong> is when they launch a full blown investigation, start pulling legal and medical records, and basically do everything they can to delay getting the payment to the family for as long as possible, And sometimes , they don't pay at all. That's why <strong class="italic">THOSE</strong> companies have the reputation that they do.
+                                </p>
+                                <br />
+                                <p>
+                                    <strong class="italic">This</strong> company does not work that way. Occidental Life actually conducts a health interview over the phone with an underwriter. They run your MIB, which is your Medical Information Bureau health report, and a script check to see what medications you take so there are no surprises. You see , they do the work of actually <strong>qualifying</strong> us on the front end... which means that when your time comes and your family needs the money, your claim will be paid <strong>tax free</strong> within <strong>24-48 hours.</strong> The reason that Occidental Life is able to that, is because they <strong>do the work</strong> of actually qualifying you for the coverage on the FRONT END - instead of trying to disqualify your family on the BACK END.
+                                </p>
+                                <br />
+                                <p>
+                                    Now <strong>(Client Name)</strong>, wouldn't you agree that is how all companies should work?
+                                </p>
+                                <p style="font-size:12pt;color:#ff0000;font-style: italic;">
+                                    <strong>NOTE: </strong>
+                                        This is a question, let them answer.
+                                </p>
+                                <br />
+
+                                <p>
+                                    Me too. But the truth is that they just don't. That's why the state of <strong>(Client State)</strong> licenses people like me to do this job, as an advocate for people like you, every day.
+                                </p>
+                            </div>
+                            <!-- End Occidental Life -->
                         </div>
                     </div>
                     <br>
@@ -1456,7 +1510,7 @@
 </html>
 
 <style type="text/css">
-.col-sm-12, .col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4, .col-sm-3,.col-sm-2,.col-sm-1{
+    .col-sm-12, .col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4, .col-sm-3,.col-sm-2,.col-sm-1{
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -2127,12 +2181,20 @@
     .divider{
         height: 20px;
     }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .underline{
+        text-decoration: underline;
+    }
 </style>
 
 <script type="text/javascript">
     
     function hideTags() {
-        var names = ['rna', 'balt', 'lbl', 'amer', 'west'];
+        var names = ['rna', 'balt', 'lbl', 'amer', 'west', 'occi_life'];
         for (var i = 0; i < names.length; i++) {
             document.getElementsByClassName(names[i])[0].style.display = 'none';
         }
@@ -2160,6 +2222,9 @@
             "New Vista Modified": 'nvm',
             "Terminal Illness":'ti',
             "Critical Illness":'ci',
+            "American Legacy Level":'all',
+            "American Legacy Graded":'alg',
+            "American Legacy ROP":'alr',
         }
 
         for(var key in ids){
@@ -2178,6 +2243,7 @@
             "Liberty Bankers Life": ["Preferred", "Standard", "Modified Whole Life"],
             "American General": ["American General"],
             "Great Western": ["Assurance Plus", "Guaranteed Assurance"],
+            "Occidental Life": ["American Legacy Level", "American Legacy Graded", "American Legacy ROP"],
             "Foresters": ["PlanRight Level", "PlanRight Graded", "PlanRight Modified"],
             "Prosperity": ["New Vista Level", "New Vista Graded", "New Vista Modified"],
             "5Star Life": ["Terminal Illness", "Critical Illness"]
@@ -2221,6 +2287,9 @@
             document.getElementsByClassName('amer')[0].style.display = 'block';
         }else if (company == 'Great Western'){
             document.getElementsByClassName('west')[0].style.display = 'block';
+        }
+        else if (company == 'Occidental Life'){
+            document.getElementsByClassName('occi_life')[0].style.display = 'block';
         }
     }
     
