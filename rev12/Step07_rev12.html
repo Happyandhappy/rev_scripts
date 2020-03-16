@@ -1627,7 +1627,7 @@
                             </span>
                         </p>
                         <br>
-                        <p style="padding:5px 0px 0px 30px;">
+                        <p style="padding:5px 0px 0px 40px;">
                             <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Pass/Fail:</strong>
                                 <select name="Pass Fail" value="(#Pass Fail#)">
@@ -1638,7 +1638,7 @@
                             </span>
                         </p>
                         <br>
-                        <div class="all alg">
+                        <div id="not_alr">
                             <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
                                 <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">
                                     <strong>NOTE: </strong>Verify and/or complete the rest of the information on your screen. Make sure all applicable spaces are filled in and spelled correctly, but move quickly!!!
@@ -1704,7 +1704,7 @@
 </html>
 
 <style type="text/css">
-.col-sm-12, .col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4, .col-sm-3,.col-sm-2,.col-sm-1{
+    .col-sm-12, .col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4, .col-sm-3,.col-sm-2,.col-sm-1{
         padding-right: 10px;
         padding-left: 10px;
     }
@@ -2391,6 +2391,14 @@
 </style>
 
 <script type="text/javascript">
+    // hide/show "The Close" Paragraph
+    function setCloseTab(value){
+        if (value !== 'American Legacy ROP')
+            document.getElementById('not_alr').style.display = 'block';
+        else 
+            document.getElementById('not_alr').style.display = 'none';
+    }
+
    function planSet(company) {
 
         var plans = {
@@ -2430,9 +2438,14 @@
 
         document.getElementById('gatherinfo_amer').style.display = 'none';
         document.getElementById('gatherinfo').style.display = 'none';
+        document.getElementById('gatherinfo_occ').style.display = 'none';
+
+
         if (company == 'American General' || company == 'Great Western') {
             document.getElementById('gatherinfo_amer').style.display = 'block';
-        } else {
+        } else if (company == 'Occidental Life'){
+            document.getElementById('gatherinfo_occ').style.display = 'block';
+        }else {            
             document.getElementById('gatherinfo').style.display = 'block';
         }
 
@@ -2440,6 +2453,7 @@
             document.getElementById('lbl_benefit').style.display = 'block';
         else
             document.getElementById('lbl_benefit').style.display = 'none';
+        setCloseTab(selects[0].value);
     }
 
     function setSoldAgents(){
@@ -2556,6 +2570,10 @@
                     document.getElementsByName('email_selected')[0].value = document.getElementsByName('Carrier Product 2')[0].value + '_' + document.getElementsByName('Plan')[0].value;
                 }
                 if (tag_name == "Carrier Product 2") planSet(value);
+
+                if (tag_name == 'Plan'){
+                    setCloseTab(value);
+                }
             });
         }
 
