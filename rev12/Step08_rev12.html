@@ -1538,7 +1538,12 @@
         var selects = document.getElementsByName('Carrier Product 2');
         names = ['American General', 'Great Western'];
         for (i = 0 ; i < names.length; i++)
-            if (selects[selects.length - 1].value == names[i]) return true;        
+            if (selects[selects.length - 1].value == names[i]) return true;
+
+        var selects2 = document.getElementsByName('Plan');
+        if (selects2[selects.length - 1].value === 'American Legacy ROP')
+            return true;
+        
         return false;
     }
     // set the positions of scrollbars
