@@ -72,15 +72,15 @@
                                 <input type="submit" control="submit" action="submit_and_email_template" email-to="Email" email-template="(#email_selected#)" value="Submit and Email" class="button hidden submit">
                                 <!-- <button id="pre" class="button hidden pre">PREVIOUS</button> -->
 
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev11" value="PREVIOUS" class="button hidden pre step6">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step08_rev11" value="NEXT" class="button hidden step8">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev11" value="step1" class="button hidden step1">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev11" value="step2" class="button hidden step2">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev11" value="step3" class="button hidden step3">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev11" value="step4" class="button hidden step4">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev11" value="step5" class="button hidden step5">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev11" value="step9" class="button hidden step9">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev11" value="step10" class="button hidden step10">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step06_rev12" value="PREVIOUS" class="button hidden pre step6">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step08_rev12" value="NEXT" class="button hidden step8">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step01_rev12" value="step1" class="button hidden step1">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step02_rev12" value="step2" class="button hidden step2">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step03_rev12" value="step3" class="button hidden step3">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step04_rev12" value="step4" class="button hidden step4">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step05_rev12" value="step5" class="button hidden step5">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step09_rev12" value="step9" class="button hidden step9">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="step10_rev12" value="step10" class="button hidden step10">
 
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -1520,7 +1520,9 @@
 
                         <!-- Insured Under 50 Button -->
                         <p>
-                            <button class="btn button submit" style="display: block;">Insured Under 50</button>
+                            <!-- <button class="btn button submit" style="display: block;" onclick="navigate('ASR_Script_rev5');">Insured Under 50</button> -->
+                            
+                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Insured Under 50_rev12" value="Insured Under 50" class="btn button submit">
                             <br>
                             <br>
                             <br>
@@ -2611,5 +2613,9 @@
 
     function pre() {
         document.getElementsByClassName('pre')[0].click();
+    }
+
+    function navigate(clsname) {
+        document.getElementsByClassName(clsname)[0].click();
     }
 </script>

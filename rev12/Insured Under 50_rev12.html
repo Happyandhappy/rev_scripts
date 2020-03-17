@@ -664,7 +664,7 @@
                     <br>
                 </div>
                 <div class="bar_bottom">
-                    <a class="btn button submit" onclick="navigate('Step07_Rev12');">Return</a>
+                    <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step07_rev12" value="Return" class="btn button submit">
                 </div>
             </div>
         </div>
@@ -1499,24 +1499,24 @@
             }
 
             // Event on Payment Issues
-            document.getElementById('sel_payissue').addEventListener('change', function(e){
+           /* document.getElementById('sel_payissue').addEventListener('change', function(e){
                 hideEles(payIssues);
                 for ( x in payIssues){
                     if (e.target.value === x){
                         document.getElementById(payIssues[x]).classList.remove('hidden');
                     }
                 }
-            });
+            });*/
 
             // Event on Payment Scheduled
-            document.getElementById('sel_payscheduled').addEventListener('change', function(e){
+            /*document.getElementById('sel_payscheduled').addEventListener('change', function(e){
                 hideEles(noOptions);
                 for ( x in noOptions){
                     if (e.target.value === x){
                         document.getElementById(noOptions[x]).classList.remove('hidden');
                     }
                 }
-            });
+            });*/
         }
 
 
@@ -1537,13 +1537,13 @@
                 if (names[i] == "Carrier Product 2") planSet(document.getElementById(ids[i]).value);
             }
 
-            // add event listener for each step of top bar
+            /*// add event listener for each step of top bar
             for (index = 1; index <= 10; index++) {
                 if (index == 1) continue;
                 document.getElementById('step' + index).addEventListener('click', function(e) {
                     document.getElementsByClassName(e.target.id)[0].click();
                 });
-            }
+            }*/
 
         }
 
