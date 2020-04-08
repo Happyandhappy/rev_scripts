@@ -658,6 +658,7 @@
                     
                     <h4 class="rna balt lbl">IN CALL INTRODUCTION </h4>
                     <h4 class="occ">CALL WITH OCC</h4>
+                    <h4 class="susa">CALL WITH SUSA</h4>
                     
 
                     <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
@@ -2447,7 +2448,7 @@
                     <!-- # End Liberty Bankers Life # -->
 
                     <!-- Start Occidental Life -->
-                    <div class="occ">
+                    <div class="occ susa">
                         <br>
                         <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
                             <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;"><strong>NOTE: </strong>Provide information as requested by the Enrolment Representative.</span>
@@ -3199,7 +3200,7 @@
 <script type="text/javascript">
      
     function hideTags() {
-        var names = ['rna', 'balt', 'lbl', 'occ']; //, 'amer'
+        var names = ['rna', 'balt', 'lbl', 'occ', 'susa']; //, 'amer'
         for (var i = 0; i < names.length; i++) {
             var tags = document.getElementsByClassName(names[i]);
             for (var j = 0; j < tags.length; j++)
@@ -3252,6 +3253,7 @@
             "American General": "amer",
             "Great Western": "west",
             "Occidental Life": "occ",
+            "Prosperity Life":'susa'
         }
 
         if (company  in mappings){
