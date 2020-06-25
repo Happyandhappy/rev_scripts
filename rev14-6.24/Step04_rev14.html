@@ -11,6 +11,7 @@
 
 <body class="" id="">
     <div class="col-sm-12" id="content">
+        <!-- (#page#) -->
         <div class="col-sm-7 leftSide">
             <div class="body">
                 <div class="container">
@@ -65,24 +66,24 @@
                                 <input type="hidden" control="input " id="DentalPlan" value="(#Dental Plan#)">
                                 <input type="hidden" control="input " id="DentalCoverage" value="(#Dental Coverage#)">
                                 <input type="hidden" control="input " id="VisionCoverage" value="(#Vision Coverage#)">
-                                <input type="hidden" control="input " name="SoldAgentList" id="SoldAgentList" value="Randy Zammatta,Yolanda Pitzer,Jamie Scott,Patrick McAllister,Nytaea Gholson,Myeshia Foreman,Melissa Erler,Mary Taylor,LeAnne Rumbel,Jack Dyke,Kathrine Avedician,DYNAMIC HQ,Alexes Hayes,Michelle Carrol,Mason Jackson,Mark Ross,James Cummings,Jeff Gifford,Ivan Dazil,Bob Young,Kathy Glover,Phillip Minor,Cheryl McVaney,Joe Williams,Brian Livesay,Corey Adkins,Michelle K.,D-Nylle Smith,Kenyetta M.,Shynara W.,Jamie Dilard">
-
+                                <input type="hidden" control="input " name="SoldAgentList" id="SoldAgentList" value="(#SoldAgentList#)">
+                                <input type="hidden" control="input" id="TobaccoUse" value="(#Tobacco Use#)">
+                                <input type="hidden" control="input" id="AMAM" value="(#AMAM#)">
 
                                 <button class="button hidden submit1" id="submit">SAVE</button>
                                 <input type="submit" control="submit" action="submit_and_email_template" email-to="Email" email-template="(#email_selected#)" value="Submit and Email" class="button hidden submit">
                                 <!-- <button id="pre" class="button hidden pre">PREVIOUS</button> -->
 
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step02_rev13" value="NEXT" class="button next hidden step2">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step03_rev13" value="step3" class="button hidden step3">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step04_rev13" value="step4" class="button hidden step4">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step05_rev13" value="step5" class="button hidden step5">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step06_rev13" value="step6" class="button hidden step6">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step07_rev13" value="step7" class="button hidden step7">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step08_rev13" value="step8" class="button hidden step8">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step09_rev13" value="step9" class="button hidden step9">
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step10_rev13" value="step10" class="button hidden step10">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step05_rev14" value="NEXT" class="button next hidden step5">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step03_rev14" value="PREVIOUS" class="button pre hidden step3">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step01_rev14" value="step1" class="button hidden step1">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step02_rev14" value="step2" class="button hidden step2">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step06_rev14" value="step3" class="button hidden step6">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step07_rev14" value="step4" class="button hidden step7">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step08_rev14" value="step8" class="button hidden step8">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step09_rev14" value="step9" class="button hidden step9">
+                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="Step10_rev14" value="step10" class="button hidden step10">
 
-                                <input type="submit" control="submit" action="submit_and_navigate" navigate-to="ASR Script_rev13" value="ASR Script_rev13" class="button hidden ASR_script_rev13">
 
                                 <div class="row">
                                     <div class="col-sm-12">
@@ -176,19 +177,26 @@
 
                                         <!--Eighth Row-->
                                         <div class="row">
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-6">
                                                 <label><strong>City</strong>
                                                 </label>
                                                 <input type="text" control="input " class="form-control" field-name="City" name="City" value="(#City#)">
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-sm-6">
                                                 <label>Zip Code</label>
                                                 <input type="text" control="input " class="form-control" field-name="ZipCode" name="ZipCode" value="(#ZipCode#)">
                                             </div>
-                                            <div class="col-sm-4">
-                                                <label><strong>State</strong>
-                                                </label>
-                                                <input type="text" control="input " class="form-control" field-name="State" name="State" value="(#State#)">
+                                            <div class="col-sm-6">
+                                                <label><strong>State</strong></label>
+                                                <input type="text" control="input " class="form-control" field-name="State" name="State" value="(#State#)" id="state">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <label><strong>AMAM</strong></label>
+                                                <select name="AMAM" value="(#AMAM#)" class="form-control">
+                                                    <option value="(#AMAM#)" selected="" hidden="">(#AMAM#)</option>
+                                                    <option value="Pioneer American Life">Pioneer American Life</option>
+                                                    <option value="Occidental Life">Occidental Life</option>
+                                                </select>
                                             </div>
                                         </div>
 
@@ -302,6 +310,7 @@
                                                     <option value="Great Western">Great Western</option>
                                                     <option value="Occidental Life">Occidental Life</option>
                                                     <option value="Prosperity Life">Prosperity Life</option>
+                                                    <option value="American Amicable">American Amicable</option>
                                                     <!--<option value="Foresters">Foresters</option>-->
                                                     <!--<option value="Prosperity">Prosperity</option>-->
                                                     <!--<option value="5Star Life">5Star Life</option>-->
@@ -633,6 +642,7 @@
                                     </div>
                                     <!-- end section 2 -->
                                 </div>
+                                <!-- end section 2 -->
                             </form>
                         </div>
                     </div>
@@ -644,9 +654,9 @@
                 <div class="progress_div">
                     <ul class="progressbar" id="progressbar">
                         <li id="step1" class="active" style="width: 8%">Greetings</li>
-                        <li id="step2" style="width: 9%">Basic Information</li>
-                        <li id="step3" style="width: 10%">Coverage &amp; Needs</li>
-                        <li id="step4" style="width: 11%">Disability &amp; Health Interview</li>
+                        <li id="step2" class="active" style="width: 9%">Basic Information</li>
+                        <li id="step3" class="active" style="width: 10%">Coverage &amp; Needs</li>
+                        <li id="step4" class="active" style="width: 11%">Disability &amp; Health Interview</li>
                         <li id="step5" style="width: 12%">Features, Budget &amp; Recap</li>
                         <li id="step6" style="width: 12%">Choices &amp; Close</li>
                         <li id="step7" style="width: 11%">Information &amp; Banking</li>
@@ -657,175 +667,452 @@
                 </div>
                 <div class="bar_top"></div>
                 <div class="col-sm-12 rightbody">
-                    <div id="greeting">
-                        <h4>GREETING</h4>
-                        <p></p>
-                        <p style="padding:0;">
-                            <span>Hi, is this (#FirstName#)? Hi (#FirstName#), my name is </span>
-                            <span style="font-weight:700">(#Rep#). </span>
-                            <span>How are you doing today? Good! </span>
-                        </p>
-                        <p style="padding:10px 30px;">
-                            <span>
-                                <strong>Lead Source:</strong>
-                                <select field-name="LeadSource" name="LeadSource">
-                                    <option value="(#LeadSource#)" selected="" hidden="">(#LeadSource#)</option>
-                                    <option value="Telephone">Telephone</option>
-                                    <option value="Facebook">Facebook</option>
-                                </select>
-                            </span>
-                        </p>
-
-                        <p style="padding:0px;">
-                        </p>
-                        <div id="ledsource_tel" style="display: none;">
-                            <span style="font-size: 12pt;">
-                                    The reason for my call today is that you recently spoke with one of my associates,
-                                    here in the office, regarding the state regulated senior programs available to you in (#State#) for burial coverage. During that initial phone call you set up a security question with us, so that you would <p>
-                        </p><span class="bold">know</span> I was the right person calling you back and you said your favorite hobby/color is (#Hobbycolor#), is that correct?
-                            <br>OK, great!! So, I'm the one you are supposed to be working with today and it's pleasure to speak with you.
-                            </span>
-                        </div>
-                        <div id="ledsource_face" style="display: none;">
-                            <span style="font-size: 12pt;">
-                                    The reason for my call today is that you recently requested information on Facebook, regarding the state regulated senior programs available to you in (#State#) for burial coverage. 
-                            <br>I'm the one you are supposed to be working with today and it's pleasure to speak with you.
-                            </span>
-                        </div>
-                        <p></p>
-                        <p style="padding:10px 30px;">
-                            Now is this coverage for you or a loved one?
-                            <br>
-                            <span><strong>For them or Loved one:</strong>
-                                    <input type="text" control="input " field-name="Desired Coverage" name="Desired Coverage" value="(#Desired Coverage#)">
-                                </span>
-                        </p>
-                        <p style="padding:0;">
-                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">
-                                <strong>NOTE:</strong>The favorite hobby question is a great opportunity to connect and start the bonding process - Make a friend make a sale! Be prepared to overcome early objection
-                                </span>
-                        </p>
-                        <p style="padding:10px 30px 0px 30px;">
-                            <span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>*** Preferred Name:</strong> <input type="text" control="input " field-name="Preferred Name" name="Preferred Name" value="(#Preferred Name#)"> 
-                            </span>
-                        </p>
-                        <p style="padding-top:5px;">
-                            <span>
-                                <strong>Notes:</strong> <br>
-                                <textarea field-name="Notes " name="Notes">(#Notes#)</textarea>
-                            </span>
-                        </p>
-                        <p style="padding:0">
-                            <span>
-                                Now (#Preferred Name#), one of the most common needs my customers have is to make sure that when their time comes, they’re not leaving a big financial burden for their loved ones, is that how you feel? Okay, well that is exactly what we do. I help people just like you, every day, take this burden off of their family and ensure that their final wishes are met. 
-                            </span>
-                        </p>
-                        <p style="padding:0;margin:0;color:#000000;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">            
-                            </span>
+                    <h4>DISABILITY &amp; HEALTH INTERVIEW</h4>
+                    <p></p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Are you still working, retired or are you collecting disability?</span>
+                    </p>
+                    <!-- Work Status -->
+                    <p style="padding: 10px 0px 10px 30px">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            <strong>Work Status:</strong>
+                            <select field-name="Work" name="Work">
+                                <option value="(#Work#)" selected="" hidden="">(#Work#)</option>
+                                <option value="Retired">Retired</option>
+                                <option value="Working">Working</option>
+                                <option value="Disabled">Disabled</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </span>
+                    </p>
+                    <div id="retired" style="padding: 10px 0px 10px 0px; display: none;">
+                        <p style="font-weight: 700; font-size: 12pt">What did you do for a living?</p>
+                    </div>
+                    <div id="working" style="padding: 10px 0px 10px 0px; display: none;">
+                        <p style="font-weight: 700; font-size: 12pt">What do you do for a living?</p>
+                    </div>
+                    <div id="disabled" style="padding: 10px 0px 10px 0px; display: none;">
+                        <p style="font-weight: 700; font-size: 12pt">
+                            What is the nature of your disability? What medications do you take for that? When were you first diagnosed or when did that happen to you? Are you able to get around ok or do you require a wheelchair or a walker to get around? Are you able to feed, bathe
+                            and dress yourself ok?
                         </p>
                         <br>
-                        <p style="padding:0;">
-                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">
-                                <strong>*** EXPO TRANSFER START HERE ***</strong>
-                            </span>
-                        </p>
+                        <span style="font-size:12pt;color:#ff0000;font-style: italic;">
+                            <strong>NOTE: </strong>
+                            If they are disabled you need to understand what kind of drugs they take, can they get around ok without aid of a walker, cane or wheelchair and can they feed, bathe, and dress themselves. Make sure the client only discusses the main reason they are on disability with the enrollment rep and not all of their health conditions/medications.
+                        </span>
+                    </div>
+                    <div id="other" style="padding: 10px 0px 10px 0px; display: none;">
+                        <span style="font-size:12pt;color:#ff0000;font-style: italic;">
+                            <strong>NOTE: </strong>
+                            Make notes about their income source(s)
+                        </span>
+                    </div>
+                    <!--# End Work Status #-->
 
-                        <p style="padding:0;">
-                            <span style="color: #ff0000; font-weight: 700;"></span>
-                            <span>Now, before we get started, I want you to know who you are on the phone with. My name is 
-                                </span>
-                            <span style="font-weight:700">(#Rep#),</span>
-                            <span>and I am a</span>
-                            <span style="font-style:italic">Senior Benefits Advocate</span>.
-                            <span> I work here in our final expense department. I am also the licensed field underwriter who is going to determine which one of the state regulated programs you qualify for, and I’m going to help you put that coverage in place </span>
-                            <span style="font-weight:700">today</span>.
-                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-style:normal">This is an EASY three step process, and as your advocate I will be with you through every step!</span>
-                        </p>
-                        <br>
-                        <p style="padding:0;">
-                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">
-                                <strong>*** EXPO TRANSFER ONLY SKIP TO NEXT PAGE ***</strong>
+                    <br>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>This is a great place to bond with your client.</span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    </p>
+                    <div class="notes" style="padding: 10px 0px 10px 30px">
+                        <p>
+                            <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                <strong>Occupation or name of Disability:</strong>
+                                    <!--<input type="text" control="input " field-name="Occupation Name of Disability" name="Occupation Name of Disability" value="(#Occupation Name of Disability#)">-->
+                                <textarea field-name="Occupation Name of Disability" name="Occupation Name of Disability">(#Occupation Name of Disability#)</textarea>
                             </span>
                         </p>
                     </div>
-                    <div class="divider"></div>
-                    <div id="discount">
-                        <h4>DISCOUNT QUESTIONS</h4>
-                        <p>
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Alright (#Preferred Name#), now first things first, I need to ask you a couple of quick questions to see if you qualify for any of the discounts that you may be entitled to:</span>
-                        </p>
-                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                        </p>
-                        <p>
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Have you used electronic cigarettes, tobacco or any other nicotine products in the past 12 months?</span>
-                        </p>
-                        <p style="padding:0;">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                        </p>
-                        <p style="padding:0px 0px 0px 25px;">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Tobacco Use:</strong> 
-                                <select name="Tobacco Use" value="(#Tobacco Use#)">
-                                    <option value="(#Tobacco Use#)" selected="" hidden="">(#Tobacco Use#)</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal"></span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Ok (#Preferred Name#), now all of the companies I work with look at health conditions different ways, so I need to ask you a few questions about your health to see which one will be the best fit for you, but before we get started I need to let you know that there may be circumstances with your health that will limit my ability to offer coverage. I promise to be completely honest with you about that, and I need you to do the same way with me, okay? </span>
+                    </p>
+                    <br>
+                    <ul class="lst-kix_lvwutnyjyqn6-0 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Are you confined to a bed, a wheelchair, or are you using a cane or walker?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_lvwutnyjyqn6-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;color:#ff0000">YES:</span>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;If your house was on fire you could get out without it?</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;color:#ff0000">CANE: </span>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Do you mostly use the cane on longer walks and things like that?</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_lvwutnyjyqn6-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Are you in a nursing home, hospital, or do you receive hospice or home health care? Do you require assistance to feed, bathe and dress yourself?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_lvwutnyjyqn6-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;"><strong>NOTE: </strong>If receiving home health care, find out if the person is just popping in and cleaning and preparing meals, or if they need assistance with feeding, bathing, or dressing themselves. (this is mostly for LBL disability)</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:italic;">
+                                <strong>NOTE: </strong>If they are currently in the hospital, long-term care, assisted living, or hospice - KO for all companies.
                             </span>
-                        </p>
-                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Do you participate in any hazardous activities like skydiving, bull riding or anything like that?
+                        </li>
+                    </ul>
+                    <br>
+
+                    <ul class="lst-kix_lvwutnyjyqn6-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;font-weight:700">Do you have any breathing disorders like COPD, emphysema, </span>
+                            <span style="font-size:12pt;font-style:italic;font-weight:700">chronic</span>
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;bronchitis or do you use oxygen?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_lvwutnyjyqn6-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Chronic means that it never goes away. Not seasonal.</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">BL - If they can answer all the following correctly, then SGI. If not, SGII</span>
+                        </li>
+                    </ul>
+                    <ol class="lst-kix_lvwutnyjyqn6-2 start" start="1" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:108pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">When were you first diagnosed? </span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">(Needs to be more than 2 yrs.)</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:108pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">Do you use a nebulizer? </span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">(needs to be no)</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:108pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">Have you seen your doctor specifically about COPD in the past 2 years? </span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">(needs to be no)</span>
+                        </li>
+                    </ol>
+                    <p style="padding:0px 0px 0px 45px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            <strong>Notes:</strong><br>
+                            <textarea field-name="Notes " name="Notes">(#Notes#)</textarea>
+                        </span>
+                    </p>
+                    <p style="padding:0px 0px 0px 45px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                <br><strong>MEDICATIONS:</strong><br>
+                                <textarea field-name="Medications" name="Medications">(#Medications#)</textarea>
                             </span>
-                        </p>
-                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                        </p>
-                        <p>
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;• Now (#Preferred Name#), most of the companies that I work with offer some really deep discounts based on how you would be able to set up your monthly premium payments. If we can get you approved for something that you are comfortable with, and that meets your needs, do you have an active checking or savings account with a bank or credit union that you can use to pay your premium each month?</span>
+                    </p>
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0 start" style="padding:0px;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you been asked to stop using drugs or alcohol, or have you been treated for abuse?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;color:#ff0000">YES:</span>
+                            <span style="font-size:12pt;">&nbsp;</span>
+                            <span style="font-size:12pt">Have you actually been treated* for abuse, like hospitalized or rehab treatment?</span>
+                            <span style="font-size:12pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">*AA is not considered treatment.</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you been convicted of a felony or incarcerated, or are you on parole or probation or have you been refused coverage?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">What were you convicted of?</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">(might be ok if convicted of white collar crime)</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;font-weight:700">Have you been </span>
+                            <span style="font-size:12pt;font-style:italic;font-weight:700">medically diagnosed</span>
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;with Alzheimer's, Dementia, or memory-loss or do you take any kind of memory pill?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;font-style:italic">Actually been diagnosed</span>
+                            <span style="font-size:12pt">&nbsp;by a doctor with Alzheimer's or Dementia</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">LBL is the only company that asks the memory-loss question, and they are referring to permanent memory problems, not a temporary condition from an accident or something like that.</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;color:#ff0000">Alzheimer's and Dementia are a </span>
+                            <span style="font-size:12pt;color:#ff0000;font-weight:700">KO</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">&nbsp;for all companies. Make sure they have been medically diagnosed.</span>
+                        </li>
+                    </ul>
+                    <br>
+
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">AIDS or HIV? What about Systemic Lupus or any immune disorder? Rheumatoid or Osteo-Arthritis?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">BL considers Rheumatoid Arthritis as an immune disorder - KO</span>
+                        </li>
+                    </ul>
+
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">MS, Muscular Dystrophy, Parkinson's or ALS (Lou Gehrig's disease)? Epilepsy?</span>
+
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start red" style="padding:0;margin:0">
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:75pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">How do you treat your MS?</span>
+                        </li>
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:75pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">How do you treat your Parkinsons?</span>
+                        </li>
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:75pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">How do you treat your Epilepsy?</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Any internal cancer, skin cancer excluding Basal or Sickle Cell Anemia?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start red" style="padding:0;margin:0">
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:75pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">How long have you been cancer free?</span>
+                        </li>
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:75pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you had two or more occurrences in your lifetime?</span>
+                        </li>
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:75pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">How are you treating it?</span>
+                        </li>
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:75pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;color:#ff0000;">Have you been given less than 12 months to live?</span><span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal;font-weight: 500;">If given less than 12 months to live/terminal - KO</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Hepatitis C, or any Liver or Kidney Disease?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start red" style="padding:0;margin:0">
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Are you currently treating or are you cured of your Hepatitis C?</span>
+                        </li>
+                        <li class="red" style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">What stage is your Kidney Failure?</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you ever had an aneurysm, stroke or a TIA, which is a mini stroke?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">When did you have your stroke?</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal; font-weight: 500;">Over two years - Level with any company.</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">Are you affected by the stroke in any way?</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal; font-weight: 500;">If so, avoid LBL unless heat stroke</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Are you taking blood thinners?</span>
                             <br>
-                            <sapn>Great! Which type of account is it? Checking or Savings</sapn>
-                        </p>
-                        <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
-                        </p>
-                        <div class="notes">
-                            <p style="padding:10px 0px 10px 25px">
-                                <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
-                                        &nbsp;<strong>Select Account Type:</strong>
-                                    <select field-name="Account Type" name="Account Type">
-                                        <option value="(#Account Type#)" selected="" hidden="">(#Account Type#)</option>
-                                        <option value="Checking">Checking</option>
-                                        <option value="Saving">Saving</option>
-                                    </select>
-                                </span>
-                            </p>
-                            <p id="account_checking_content" style="padding-left:30px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left; display: none;">
-                                <span>Great!</span>
-                            </p>
-                            <p id="account_saving_content" style="padding-left:30px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left; display: none;">
-                                Have you ever used that account for automatic payments or does it receive electronic deposits?
-                            </p>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                Be aware of blood thinners in combo with beta blockers KO with RNA
+                            </span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_ii0stz3v6d7j-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you ever had a Heart Attack? Have you ever been diagnosed with Angina. Congestive heart failure? Irregular heartbeat? Had a pacemaker or defibrillator installed, or any type of Heart Problems?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_ii0stz3v6d7j-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;color:#ff0000;font-weight: 500;">If they have a pacemaker:</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">When was your pacemaker installed?</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;color:#ff0000;font-weight: 500;">If they’ve had a heart attack:</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">How long ago was your heart attack? Have you ever taken Nitro tablets? When was it last prescribed?</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal;font-weight: 500;">BL - SGI if nitro has been prescribed but not taken AND all other questions are answered no,OR SGIII if answering yes. LBL - offers MWL</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Do you take blood thinners?</span>
+                        </li>
+                    </ul>
+                    <p style="padding:0px 0px 0px 45px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                <strong>Notes:</strong><br>
+                                <textarea field-name="Notes " name="Notes">(#Notes#)</textarea> 
+                            </span>
+                    </p>
+                    <p style="padding:0px 0px 0px 45px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                                <br><strong>MEDICATIONS:</strong><br>
+                                <textarea field-name="Medications" name="Medications">(#Medications#)</textarea>
+                            </span>
+                    </p>
+                    <br>
+                    <ul class="lst-kix_3u3800yu4jd7-0 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Do you have Diabetes?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_3u3800yu4jd7-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="font-size:12pt">Is your Diabetes under control?</span><span style="font-size:10pt;">&nbsp;</span><span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal;font-weight: 500;">(take your meds and see your doc regularly)</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Are you on insulin? How old were you when you were put on insulin?</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Do you have any complications with your diabetes, like neuropathy, or eye or kidney problems?</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you ever had an amputation due to your diabetes?</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_3u3800yu4jd7-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Do you have High Blood Pressure?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_3u3800yu4jd7-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Is your blood pressure under control?</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">What medications are you taking for your high blood pressure?</span>
                             <br>
-                            <p style="padding-left:30px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
-                                <span style="font-size:12pt;color:#ff0000;font-style: italic;">
-                                    <strong>NOTE:</strong> 
-                                    We need to make sure this account can be accessed for auto-drafts. If the client is unsure reach out to your mentor but continue with the script. Come back to this if your mentor has questions.
-                                </span>
-                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
-                            </p>
-                            <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
-                                <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:  normal"></span>
-                            </p>
-                        </div>
-                    </div>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal;font-weight: 500;">Keep in mind many heart meds are used to treat HTN especially if heart condition was several years ago. It is always best if they are using the meds for HTN.</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_3u3800yu4jd7-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Do you take medication for anxiety or depression, or have you been hospitalized for major depression in the past two years?</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_3u3800yu4jd7-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you ever attempted suicide?</span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you ever been hospitalized due to depression?</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_3u3800yu4jd7-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;font-weight:700">Have you been hospitalized in the past 12 months for any reason?</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:500;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Only LBL asks this question.</span>
+                        </li>
+                    </ul>
+                    <ul class="lst-kix_3u3800yu4jd7-1 start" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt">What were you hospitalized for?</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal;font-weight: 500;">
+                                If it was for something like broken ankle or back surgery, they need to be fully recovered.
+                            </span>
+                        </li>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:72pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0"><span style="color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">Have you been released by your doctor?</span>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="lst-kix_3u3800yu4jd7-0" style="padding:0;margin:0">
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;font-weight:500">
+                                <strong>Do you have any outstanding or pending diagnostic* testing? What about any upcoming surgeries or have you been told you need surgery?</strong>
+                            </span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal; font-weight: 500;">
+                                *diagnostic does not include routine testing - ex: diabetes monitoring. Means being diagnosed for a new medical condition.
+                            </span>
+                        </li>
+                        <br>
+                        <li style="padding-top:0pt;color:#000000;padding-left:0pt;font-size:11pt;padding-bottom:7pt;line-height:1.15;margin-right:0;margin-left:36pt;margin-top:0;orphans:2;margin-bottom:0;widows:2;text-align:left;padding-right:0">
+                            <span style="font-size:12pt;font-weight:700">
+                                Are there any other prescription medications you are taking that we have not discussed?</span>
+                            <span style="font-size:10pt;">&nbsp;</span>
+                            <span style="color:#ff0000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal; font-weight: 500;">
+                                Go over every medication they are taking. Ask about medications they have been prescribed, but may or may not still be taking. Find out when they last filled each prescription. *Refer to each company's med list regarding each drug.
+                            </span>
+                        </li>
+                    </ul>
+                    <p style="padding:0px 0px 0px 45px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                           <strong>Notes:</strong><br>
+                            <textarea field-name="Notes" name="Notes">(#Notes#)</textarea> 
+                        </span>
+                    </p>
+                    <p style="padding:0px 0px 0px 45px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            <br><strong>MEDICATIONS:</strong><br>
+                            <textarea field-name="Medications" name="Medications">(#Medications#)</textarea>
+                        </span>
+                    </p>
+                    <br>
+                    <p style="padding-left:45px;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;text-align:left">
+                        <span style="font-size:12pt;color:#ff0000;font-style:italic;font-weight: 500;">
+                            <strong>NOTE: </strong>
+                            You should have a good idea of which company you are going with right here. Ask any UW questions you have right now! You will be able to change this again after Budget if needed
+                        </span>
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-style:normal">&nbsp;</span>
+                    </p>
+
+                    <p style="padding: 10px 0px 10px 45px">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal">
+                            <strong>Carrier and Product:</strong>
+                            <select field-name="Carrier Product 2" name="Carrier Product 2">
+                                <option value="(#Carrier Product 2#)" selected="" hidden="">(#Carrier Product 2#)</option>
+                                <option value="Royal Neighbors of America">Royal Neighbors of America</option>
+                                <option value="Baltimore Life">Baltimore Life</option>
+                                <option value="Liberty Bankers Life">Liberty Bankers Life</option>
+                                <option value="American General">American General</option>
+                                <option value="Great Western">Great Western</option>
+                                <option value="Occidental Life">Occidental Life</option>
+                                <option value="Prosperity Life">Prosperity Life</option>
+                                <option value="American Amicable">American Amicable</option>
+                                <!--<option value="Foresters">Foresters</option>-->
+                                <!--<option value="Prosperity">Prosperity</option>-->
+                                <!--<option value="5Star Life">5Star Life</option>-->
+                            </select>
+                            <select field-name="Plan" name="Plan">
+                            </select>
+                        </span>
+                    </p>
+                    <p style="padding:0;margin:0;color:#000000;font-size:11pt;line-height:1.15;orphans:2;widows:2;height:11pt;text-align:left">
+                        <span style="font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-style:normal"></span>
+                    </p>
                 </div>
                 <div class="bar_bottom">
                     <a class="btn button submit" onclick="save();">SAVE</a>
-                    <a class="btn button asr_script" onclick="navigate('ASR Script_rev13');">ASR Script</a>
                     <a class="btn button next" onclick="next();">NEXT</a>
+                    <a class="btn button pre" onclick="pre();">PREVIOUS</a>
                 </div>
             </div>
         </div>
@@ -922,7 +1209,7 @@
     .nav-body {
         width: 100%;
     }
-    
+
     p {
         margin-bottom: 5px;
     }
@@ -1506,6 +1793,24 @@
     .divider{
         height: 20px;
     }
+
+    ul.red {
+        list-style: none;
+        padding:0;
+        margin:0;
+    }
+
+    li.red{ 
+        padding-left: 1.5em; 
+        text-indent: -1.5em;
+    }
+
+    li.red:before {
+        content: "• ";
+        color: red; /* or whatever color you prefer */
+        padding-right: 5px;
+    }
+
     .italic {
         font-style: italic;
     }
@@ -1523,13 +1828,14 @@
             "Royal Neighbors of America": ["Simplified Issue Whole Life", "Graded Death Benefit"],
             "Baltimore Life": ["Silver Guard 1", "Silver Guard 2", "Silver Guard 3"],
             "Liberty Bankers Life": ["Preferred", "Standard", "Modified Whole Life"],
-            "American General": ["American General"],            
+            "American General": ["American General"],
             "Great Western": ["Assurance Plus", "Guaranteed Assurance"],
             "Occidental Life": ["American Legacy Level", "American Legacy Graded", "American Legacy ROP"],
             "Prosperity Life":["New Vista Level", "New Vista Graded", "New Vista Modified", "PrimeTerm"],
             "Foresters": ["PlanRight Level", "PlanRight Graded", "PlanRight Modified"],
             "Prosperity": ["New Vista Level", "New Vista Graded", "New Vista Modified"],
-            "5Star Life": ["Terminal Illness", "Critical Illness"]
+            "5Star Life": ["Terminal Illness", "Critical Illness"],
+            "American Amicable": ["Level", "Graded Death Benefit", "Return of Premium"],
         }
 
         try {
@@ -1537,28 +1843,24 @@
         } catch (e) {
             return;
         }
-        var planValue = document.getElementById('Plan').value;
-
-
         var selects, index;
         selects = document.getElementsByName("Plan");
         for (var i = 0; i < selects.length; i++) {
             selects[i].innerHTML = "";
             var html = "";
             if (selects[i].className == "plan") continue;
-
             for (var j = 0; j < plans[company].length; j++) {
-                if (j == 0 || plans[company][j] == planValue)
+                if (j == 0 || plans[company][j] == document.getElementById('Plan').value)
                     html += "<option value='" + plans[company][j] + "' selected=''>" + plans[company][j] + "</option>";
                 else
                     html += "<option value='" + plans[company][j] + "'>" + plans[company][j] + "</option>";
             }
             selects[i].innerHTML = html;
         }
-        document.getElementById('Plan').value = selects[1].value;
+        document.getElementById('Plan').value = selects[0].value;
         document.getElementsByClassName('plan')[0].value = selects[1].value;
     }
-
+    
     function setSoldAgents(){
         var SoldAgentList = document.getElementById('SoldAgentList').value;
         var agents = SoldAgentList.split(",");
@@ -1573,25 +1875,26 @@
             selects[i].innerHTML = innerHTML;
         }
     }
-    
+
     // set the positions of scrollbars
     function setScrolls(){
+        curpage = 4;
         page = parseInt(document.getElementById('page').value);
         scrolltop1 = document.getElementById('scroll1').value;
         scrolltop2 = document.getElementById('scroll2').value;
         
-        if (page == 1){
+        if (page == curpage){
             document.getElementsByClassName('leftSide')[0].scrollTop = scrolltop1;
-            document.getElementsByClassName('rightSide')[0].scrollTop = scrolltop2;
+            document.getElementsByClassName('rightbody')[0].scrollTop = scrolltop2;
         }
-        document.getElementById('page').value = 1;
+        document.getElementById('page').value = curpage;
         
         document.getElementsByClassName('leftSide')[0].addEventListener('scroll', function(){
             scrolltop1 = this.scrollTop;
             document.getElementById('scroll1').value = scrolltop1;
         });
         
-        document.getElementsByClassName('rightSide')[0].addEventListener('scroll', function(){
+        document.getElementsByClassName('rightbody')[0].addEventListener('scroll', function(){
             scrolltop2 = this.scrollTop;
             document.getElementById('scroll2').value = scrolltop2;
         });
@@ -1601,51 +1904,62 @@
         var selects = document.getElementsByName('Carrier Product 2');
         names = ['American General', 'Great Western'];
         for (i = 0 ; i < names.length; i++)
-            if (selects[selects.length - 1].value == names[i]) return true;        
+            if (selects[selects.length - 1].value == names[i]) return true;
         return false;
     }
-
+    
     // check leadsource value and show contents
-    function checkLeadsource(){
-        var value = document.getElementsByName('LeadSource')[0].value;
-        document.getElementById('ledsource_tel').style.display = 'none';
-        document.getElementById('ledsource_face').style.display = 'none';
+    function checkWork(){
+        var value = document.getElementsByName('Work')[0].value;
+        document.getElementById('retired').style.display = 'none';
+        document.getElementById('working').style.display = 'none';
+        document.getElementById('disabled').style.display = 'none';
+        document.getElementById('other').style.display = 'none';
 
-        if (value === 'Telephone') document.getElementById('ledsource_tel').style.display = 'block';
-        if (value === 'Facebook')  document.getElementById('ledsource_face').style.display = 'block';
+        if (value === 'Retired') document.getElementById('retired').style.display = 'block';
+        if (value === 'Working')  document.getElementById('working').style.display = 'block';
+        if (value === 'Disabled')  document.getElementById('disabled').style.display = 'block';
+        if (value === 'Other')  document.getElementById('other').style.display = 'block';
     }
 
-    function checkAccountType(){
-        var value = document.getElementsByName('Account Type')[0].value;
-        document.getElementById('account_saving_content').style.display = 'none';
-        document.getElementById('account_checking_content').style.display = 'none';
-
-        if (value === 'Checking') document.getElementById('account_checking_content').style.display = 'block';
-        if (value === 'Saving')  document.getElementById('account_saving_content').style.display = 'block';
+    function check_AMAM(){
+        var AMAM_dict = {
+            "AR": "Pioneer American Life", "AZ": "Pioneer American Life", "FL": "Pioneer American Life",
+            "GA": "Pioneer American Life", "IA": "Occidental Life"      , "IL": "Pioneer American Life",
+            "IN": "Pioneer American Life", "KS": "Pioneer American Life", "KY": "Pioneer American Life",
+            "WI": "Pioneer American Life", "MO": "Pioneer American Life", "MS": "Pioneer American Life",
+            "NC": "Pioneer American Life", "OH": "Pioneer American Life", "TX": "Pioneer American Life",
+            "SC": "Pioneer American Life", "TN": "Pioneer American Life", "VA": "Pioneer American Life",
+            "UT": "Pioneer American Life", "VA": "Pioneer American Life", "MI": "Occidental Life", 
+            "NE": "Occidental Life",
+        }
+        var state = document.getElementById('state').value;
+        var value = "";
+        if (state in AMAM_dict)
+            value = AMAM_dict[state];
+        else 
+            value = ""
+        var selects = document.getElementsByName("AMAM");
+        for ( var i = 0 ; i < selects.length ; i++ ) selects[i].value = value;
     }
 
     (function() {
         setScrolls();
         // setSoldAgents();
 
-        var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
-        var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage'];
+        cur_page = parseInt(document.getElementById('page').value);
+
+        var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage', 'Tobacco Use', 'AMAM'];
+        var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage', 'TobaccoUse', 'AMAM'];
 
         var inputs, index, name, notes, selects;
         for (var i = 0; i < names.length; i++) {
             selects = document.getElementsByName(names[i]);
-
-            var selectValue = document.getElementById(ids[i]).value;            
-            //if (names[i]=="Carrier Product 2" && selectValue == "")
-                //selectValue = "Royal Neighbors of America";
-
             for (index = 0; index < selects.length; index++) {
-                if (selectValue !="")
-                    selects[index].value = selectValue;
-                else
-                    selects[index].selectedIndex = 0;
+                if (document.getElementById(ids[i]).value != "" && document.getElementById(ids[i]).value != null)
+                    selects[index].value = document.getElementById(ids[i]).value;
             }
-            if (names[i] == "Carrier Product 2") planSet(selectValue);
+            if (names[i] == "Carrier Product 2") planSet(document.getElementById(ids[i]).value);
         }
 
         inputs = document.getElementsByTagName('input');
@@ -1682,32 +1996,31 @@
                 for (var i = 0; i < tags.length; i++) {
                     tags[i].value = value;
                 }
-
-                if (tag_name === 'LeadSource') checkLeadsource();
-                if ( tag_name === 'Account Type') checkAccountType();
-
                 if (tag_name == "Plan" || tag_name == "Carrier Product 2") {
                     document.getElementsByName('email_selected')[0].value = document.getElementsByName('Carrier Product 2')[0].value + '_' + document.getElementsByName('Plan')[0].value;
                 }
                 if (tag_name == "Carrier Product 2") planSet(value);
+
+                if ( tag_name === 'Work') checkWork();
             });
         }
 
         for (index = 1; index <= 10; index++) {
-            if (index == 1) continue;
+            if (index == 4) continue;
             document.getElementById('step' + index).addEventListener('click', function(e) {
                 var id = e.target.id;
                 
-                if (checkStatus() && id === 'step9' || id === 'step8'){
+                if (checkStatus() && id == 'step9' || id == 'step8'){
                     return;
                 }
                 document.getElementsByClassName(id)[0].click();
             });
         }
-
-
-        checkLeadsource();
-        checkAccountType();
+        document.getElementById('state').addEventListener('change', function(e){
+            check_AMAM();
+        })
+        checkWork();
+        check_AMAM();
     })();
 
     function save() {
@@ -1716,9 +2029,9 @@
 
     function next() {
         document.getElementsByClassName('next')[0].click();
-    }  
+    }
 
-    function navigate(clsname) {
-        document.getElementsByClassName(clsname)[0].click();
+    function pre() {
+        document.getElementsByClassName('pre')[0].click();
     }
 </script>
