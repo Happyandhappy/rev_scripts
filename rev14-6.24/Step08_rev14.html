@@ -1588,11 +1588,11 @@
             "AR": "Pioneer American Life", "AZ": "Pioneer American Life", "FL": "Pioneer American Life",
             "GA": "Pioneer American Life", "IA": "Occidental Life"      , "IL": "Pioneer American Life",
             "IN": "Pioneer American Life", "KS": "Pioneer American Life", "KY": "Pioneer American Life",
-            "WI": "Pioneer American Life", "MO": "Pioneer American Life", "MS": "Pioneer American Life",
-            "NC": "Pioneer American Life", "OH": "Pioneer American Life", "TX": "Pioneer American Life",
-            "SC": "Pioneer American Life", "TN": "Pioneer American Life", "VA": "Pioneer American Life",
-            "UT": "Pioneer American Life", "VA": "Pioneer American Life", "MI": "Occidental Life", 
-            "NE": "Occidental Life",
+            "MI": "Occidental Life",       "MO": "Pioneer American Life", "MS": "Pioneer American Life",
+            "NC": "Pioneer American Life", "NE": "Occidental Life",       "OH": "Pioneer American Life", 
+            "SC": "Pioneer American Life", "TN": "Pioneer American Life", "TX": "Pioneer American Life", 
+            "UT": "Pioneer American Life", "VA": "Pioneer American Life", "WA": "Pioneer American Life", 
+            "WI": "Pioneer American Life"
         }
         var state = document.getElementById('state').value;
         var value = "";
@@ -1616,11 +1616,16 @@
         var inputs, index, name, notes, selects;
         for (var i = 0; i < names.length; i++) {
             selects = document.getElementsByName(names[i]);
+
+            if (selects.length === 0 || !document.getElementById(ids[i])) continue;
+            var selectValue = document.getElementById(ids[i]) ? document.getElementById(ids[i]).value : "";
+
             for (index = 0; index < selects.length; index++) {
-                if (document.getElementById(ids[i]).value != "" && document.getElementById(ids[i]).value != null)
-                    selects[index].value = document.getElementById(ids[i]).value;
+                if (selectValue !== "")
+                    selects[index].value = selectValue;
             }
-            if (names[i] == "Carrier Product 2") planSet(document.getElementById(ids[i]).value);
+            
+            if (names[i] == "Carrier Product 2") planSet(selectValue);
         }
 
         inputs = document.getElementsByTagName('input');
