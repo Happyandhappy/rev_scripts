@@ -13,10 +13,10 @@
     <div class="col-sm-12" id="content">
         <div class="body">
             <div class="container">
-                <div class="nav-body mt-5">
+                <div class="nav-body mt-3">
                     <div class="col-sm-12">
+                        <h3 class="text-center mb-5">Lead Sheet</h3>
                         <form control="form" class="dynamic-form" id="form">
-                            <input type="hidden" control="input" id="VisionCoverage" value="(#Vision Coverage#)">
                             <input type="hidden" control="input" name="SoldAgentList" id="SoldAgentList" value="Randy Zammatta,Yolanda Pitzer,Jamie Scott,Patrick McAllister,Nytaea Gholson,Myeshia Foreman,Melissa Erler,Mary Taylor,LeAnne Rumbel,Jack Dyke,Kathrine Avedician,DYNAMIC HQ,Alexes Hayes,Michelle Carrol,Mason Jackson,Mark Ross,James Cummings,Jeff Gifford,Ivan Dazil,Bob Young,Kathy Glover,Phillip Minor,Cheryl McVaney,Joe Williams,Brian Livesay,Corey Adkins,Michelle K.,D-Nylle Smith,Kenyetta M.,Shynara W.,Jamie Dilard">
 
                             <button class="button hidden submit1" id="submit">SAVE</button>
@@ -25,732 +25,977 @@
 
                             <input type="submit" control="submit" action="submit_and_navigate" navigate-to="ASR Script_rev5" value="ASR Script_rev5" class="button hidden ASR_script_rev5">
 
+
+                            <!--First Row-->
                             <div class="row">
-                                <div class="col-sm-12">
-                                    <!--First Row-->
+                                <div class="col-sm-6">
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <select field-name="App Status" class="form-control select-align-right" name="App Status">
-                                                        <option value="RA">RA</option>
-                                                        <option value="LO">LO</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <select field-name="App Status" class="form-control" name="App Status">
-                                                        <option value="Philip. Y">Philip. Y</option>
-                                                        <option value="Abu. A">Abu. A</option>
-                                                        <option value="Alex">Alex</option>
-                                                        <option value="Chris. C">Chris. C</option>
-                                                        <option value="George. K">George. K</option>
-                                                        <option value="David. Z">David. Z</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            <select field-name="Prefix" class="form-control select-align-right" name="(#Prefix#)">
+                                                <option value="(#Prefix#)" selected="" hidden="">(#Prefix#)</option>
+                                                <option value="RA">RA</option>
+                                                <option value="LO">LO</option>
+                                            </select>
                                         </div>
                                         <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>DATE:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <input type="date" control="input" class="form-control" field-name="Carrier Policy Number" name="Carrier Policy Number" value="(#Carrier Policy Number#)">
-                                                </div>
-                                            </div>
+                                            <select field-name="AccountName" class="form-control" name="AccountName">
+                                                <option value="(#AccountName#)" selected="" hidden="">(#AccountName#)</option>
+                                                <option value="Philip. Y">Philip. Y</option>
+                                                <option value="Abu. A">Abu. A</option>
+                                                <option value="Alex">Alex</option>
+                                                <option value="Chris. C">Chris. C</option>
+                                                <option value="George. K">George. K</option>
+                                                <option value="David. Z">David. Z</option>
+                                            </select>
                                         </div>
-                                    </div>
-
-                                    <!--Second Row-->
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>CURRENT LOAN TYPE:</b>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <select field-name="App Status" class="form-control" name="App Status">
-                                                        <option value="Refinance">Refinance</option>
-                                                        <option value="Purchase">Purchase</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>CREDITOR:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <input type="text" control="input" class="form-control" field-name="CREDITOR" name="CREDITOR" value="(#CREDITOR#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--Third Row-->
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>VA DISABILITY:</b>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <select field-name="App Status" class="form-control text-red" name="App Status">
-                                                        <option value="Refinance">YES</option>
-                                                        <option value="Purchase">NO</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>CURRENT LENDER:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
-                                                        <option value="Caliber">Caliber</option>
-                                                        <option value="Nationstar">Nationstar</option>
-                                                        <option value="Quicken Loans">Quicken Loans</option>
-                                                        <option value="Loan Care">Loan Care</option>
-                                                        <option value="Freedom">Freedom</option>
-                                                        <option value="Flagstar">Flagstar</option>
-                                                        <option value="Pennymac">Pennymac</option>
-                                                        <option value="Wells Fargo">Wells Fargo</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Fourth Row -->
-                                    <!--# Start LOAN Section #-->
-                                    <div class="row mt-4">
-                                        <div class="col-sm-3">
-                                            <h4>LOAN:</h4>
-                                        </div>
-                                        <div class="col-sm-9">
-                                            <div class="row form-group">
-                                                <div class="col-sm-4">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            CURRENT RATE:
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="CURRENT RATE" name="CURRENT RATE" value="5.00%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            TERM:
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="CURRENT RATE" name="CURRENT RATE" value="360">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            PRODUCT:
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <select field-name="CURRENT LENDER" class="form-control" name="PRODUCT">
-                                                                <option value="Caliber">FIXED</option>
-                                                                <option value="Nationstar">3/1 ARM</option>
-                                                                <option value="Quicken Loans">5/1 ARM</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row form-group">
-                                                <div class="col-sm-4">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            CURRENT RATE:
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="CURRENT RATE" name="CURRENT RATE" value="3.38%">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            TERM:
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="CURRENT RATE" name="CURRENT RATE" value="360">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            PRODUCT:
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <select field-name="CURRENT LENDER" class="form-control" name="PRODUCT">
-                                                                <option value="Caliber">FIXED</option>
-                                                                <option value="Nationstar">3/1 ARM</option>
-                                                                <option value="Quicken Loans">5/1 ARM</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Fifth Row -->
-                                    <div class="row mt-2">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>* ORIGINAL LOAN DATE:</b>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="date" control="input" class="form-control" field-name="ORIGINAL LOAN DATE" name="ORIGINAL LOAN DATE" value="(#ORIGINAL LOAN DATE#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>* ORIGINAL BALANCE:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <input type="text" control="input" class="form-control" field-name="ORIGINAL BALANCE" name="ORIGINAL BALANCE" value="(#ORIGINAL BALANCE#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Sixth Row -->
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>* CURRENT BALANCE:</b>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="CURRENT BALANCE" name="CURRENT BALANCE" value="(#CURRENT BALANCE#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>MONTHLY PAYMENT:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <input type="text" control="input" class="form-control" field-name="MONTHLY PAYMENT" name="MONTHLY PAYMENT" value="(#MONTHLY PAYMENT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Seventh Row -->
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>CURRENT P and I:</b>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="CURRENT BALANCE" name="CURRENT BALANCE" value="(#CURRENT BALANCE#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>*ESCROWS:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <input type="text" control="input" class="form-control" field-name="ESCROWS" name="ESCROWS" value="(#ESCROWS#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Eighth Row -->
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>NEW LOAN AMOUNT:</b>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>TOTAL PMT W/ ESC:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <input type="text" control="input" class="form-control" field-name="TOTAL PMT W/ ESC" name="TOTAL PMT W/ ESC" value="(#TOTAL PMT W/ ESC#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Ninth Row -->
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b>NEW PAYMENTS:</b>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6 text-right">
-                                                    <b style="color: #00b050">TOTAL SAVINGS:</b>
-                                                </div>
-                                                <div class="col-sm-6 form-group">
-                                                    <input type="text" control="input" class="form-control" field-name="TOTAL PMT W/ ESC" name="TOTAL PMT W/ ESC" value="(#TOTAL PMT W/ ESC#)" style="color: #00b050">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Tenth Row -->
-                                    <div class="row">
-                                        <div class="col-sm-6"></div>
-                                        <div class="col-sm-6">
-                                            <table class="table table-bordered text-center">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="bg-light-red">Interest Savings</th>
-                                                        <th class="bg-light-blue">Add't Princpal</th>
-                                                        <th class="bg-light-grey">Gross Mon Benefits</th>
-                                                        <th class="bg-light-yellow">PRIN to PMT Ratio</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>2</td>
-                                                        <td>3</td>
-                                                        <td>4</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <!--# END LOAN SECTION #-->
-
-                                    <!--# Start PRIMARY BORROWER Section #-->
-                                    <!-- Eleventh Row -->
-                                    <div class="row">
-                                        <div class="col-sm-12 form-group">
-                                            <h4 class="text-underline">PRIMARY BORROWER:</h4>
-                                        </div>
-                                    </div>
-
-                                    <!-- Twelfth Row -->
-                                    <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-4 text-right">
-                                                    <b>FIRST:</b>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-4 text-right">
-                                                    <b>LAST:</b>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Thirteenth Row -->
-                                    <div class="row">
-                                        <div class="col-sm-6 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-4 text-right">
-                                                    <b>PHONE NUMBER:</b>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-4 text-right">
-                                                    <b>MOBILE:</b>
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-2 text-right">
-                                                    <b>EMAIL:</b>
-                                                </div>
-                                                <div class="col-sm-10">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-12 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-2 text-right">
-                                                    <b>ADDRESS:</b>
-                                                </div>
-                                                <div class="col-sm-5">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                                <div class="col-sm-2">
-                                                    <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
-                                                        <option value="PRIMARY">PRIMARY</option>
-                                                        <option value="INVESTMENT">INVESTMENT</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            <b>HOW LONG:</b>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-12 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-2 text-right">
-                                                    <b>CITY:</b>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            <b>STATE:</b>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            <b>ZIP:</b>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Fourteenth Row -->
-                                    <!-- # IF LESS THEN TWO (2) YEARS PLEASE LIST PREVIOUS ADDRESSES # -->
-                                    <div id="less-then-two">
-                                        <div class="text-center mt-2 mb-3">
-                                            <b>IF LESS THEN TWO (2) YEARS PLEASE LIST PREVIOUS ADDRESSES</b>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-12 form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-2 text-right">
-                                                        <b>ADDRESS:</b>
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
-                                                            <option value="RENTED">RENTED</option>
-                                                            <option value="OWNED">OWNED</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 text-right">
-                                                                <b>HOW LONG:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-12 form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-2 text-right">
-                                                        <b>CITY:</b>
-                                                    </div>
-                                                    <div class="col-sm-4">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 text-right">
-                                                                <b>STATE:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 text-right">
-                                                                <b>ZIP:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-12 form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-2 text-right">
-                                                        <b>ADDRESS:</b>
-                                                    </div>
-                                                    <div class="col-sm-5">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
-                                                            <option value="RENTED">RENTED</option>
-                                                            <option value="OWNED">OWNED</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 text-right">
-                                                                <b>HOW LONG:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                        <div class="col-sm-12 form-group">
-                                            <div class="row">
-                                                <div class="col-sm-2 text-right">
-                                                    <b>CITY:</b>
-                                                </div>
-                                                <div class="col-sm-4">
-                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            <b>STATE:</b>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="row">
-                                                        <div class="col-sm-6 text-right">
-                                                            <b>ZIP:</b>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6 form-group text-right">
-                                                        <b>MARITAL STATUS:</b>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6 form-group text-right">
-                                                        <b>DEPENDENTS:</b>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6"></div>
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6 form-group text-right">
-                                                        <b>AGES:</b>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6 form-group text-right">
-                                                        <b class="text-red">*SOCIAL SECURITY:</b>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6 form-group text-right">
-                                                        <b>*DOB:</b>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 form-group text-right">
-                                                                <b>RETIRED:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
-                                                                    <option value="Caliber">YES</option>
-                                                                    <option value="Nationstar">NO</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 form-group text-right">
-                                                                <b>HOW LONG:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6 form-group text-right">
-                                                        <b>*FICOS:</b>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 form-group text-right">
-                                                                <b>BRANCH:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
-                                                                    <option value="ARMY">ARMY</option>
-                                                                    <option value="NAVY">NAVY</option>
-                                                                    <option value="AIR FORCE">AIR FORCE</option>
-                                                                    <option value="MARINES">MARINES</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-6">
-                                                        <div class="row">
-                                                            <div class="col-sm-6 form-group text-right">
-                                                                <b>YEARS SERVED:</b>
-                                                            </div>
-                                                            <div class="col-sm-6">
-                                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <!--Twenty-Third Row-->
-                                    <div>
-                                        <label>Current Insurance Info</label>
-                                        <!--<input type="text" control="input" class="form-control" field-name="Current Insurance Info" name="Current Insurance Info" value="(#Current Insurance Info#)">-->
-                                        <textarea name="Current Insurance Info" field-name="Current Insurance Info">(#Current Insurance Info#)</textarea>
                                     </div>
                                 </div>
-                                <!-- end section 2 -->
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>DATE:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <input type="date" control="input" class="form-control" field-name="CurrentDate" name="CurrentDate" value="(#CurrentDate#)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Second Row-->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>CURRENT LOAN TYPE:</b>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <select field-name="LoanType" class="form-control" name="LoanType">
+                                                <option value="(#LoanType#)" selected="" hidden="">(#LoanType#)</option>
+                                                <option value="Refinance">Refinance</option>
+                                                <option value="Purchase">Purchase</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>CREDITOR:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <input type="text" control="input" class="form-control" field-name="Creditor" name="Creditor" value="(#Creditor#)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Third Row-->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>VA DISABILITY:</b>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <select field-name="Va Disability" class="form-control text-red" name="Va Disability">
+                                                <option value="(#Va Disability#)" selected="" hidden="">(#Va Disability#)</option>
+                                                <option value="Refinance">YES</option>
+                                                <option value="Purchase">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>CURRENT LENDER:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <select field-name="Current Lender" class="form-control" name="Current Lender">
+                                                <option value="(#Current Lender#)" selected="" hidden="">(#Current Lender#)</option>
+                                                <option value="Caliber">Caliber</option>
+                                                <option value="Nationstar">Nationstar</option>
+                                                <option value="Quicken Loans">Quicken Loans</option>
+                                                <option value="Loan Care">Loan Care</option>
+                                                <option value="Freedom">Freedom</option>
+                                                <option value="Flagstar">Flagstar</option>
+                                                <option value="Pennymac">Pennymac</option>
+                                                <option value="Wells Fargo">Wells Fargo</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Fourth Row -->
+                            <!--# Start LOAN Section #-->
+                            <div class="row mt-4">
+                                <div class="col-sm-3">
+                                    <h4>LOAN:</h4>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="row form-group">
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    CURRENT RATE:
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="Current Rate" name="Current Rate" value="(#Current Rate#)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    TERM:
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="CURRENT RATE" name="CURRENT RATE" value="360">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    PRODUCT:
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select field-name="CURRENT LENDER" class="form-control" name="PRODUCT">
+                                                        <option value="Caliber">FIXED</option>
+                                                        <option value="Nationstar">3/1 ARM</option>
+                                                        <option value="Quicken Loans">5/1 ARM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    CURRENT RATE:
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="CURRENT RATE" name="CURRENT RATE" value="3.38%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    TERM:
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="CURRENT RATE" name="CURRENT RATE" value="360">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    PRODUCT:
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select field-name="CURRENT LENDER" class="form-control" name="PRODUCT">
+                                                        <option value="Caliber">FIXED</option>
+                                                        <option value="Nationstar">3/1 ARM</option>
+                                                        <option value="Quicken Loans">5/1 ARM</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fifth Row -->
+                            <div class="row mt-2">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>* ORIGINAL LOAN DATE:</b>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="date" control="input" class="form-control" field-name="ORIGINAL LOAN DATE" name="ORIGINAL LOAN DATE" value="(#ORIGINAL LOAN DATE#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>* ORIGINAL BALANCE:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <input type="text" control="input" class="form-control" field-name="ORIGINAL BALANCE" name="ORIGINAL BALANCE" value="(#ORIGINAL BALANCE#)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sixth Row -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>* CURRENT BALANCE:</b>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" control="input" class="form-control" field-name="CURRENT BALANCE" name="CURRENT BALANCE" value="(#CURRENT BALANCE#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>MONTHLY PAYMENT:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <input type="text" control="input" class="form-control" field-name="MONTHLY PAYMENT" name="MONTHLY PAYMENT" value="(#MONTHLY PAYMENT#)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Seventh Row -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>CURRENT P and I:</b>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" control="input" class="form-control" field-name="CURRENT BALANCE" name="CURRENT BALANCE" value="(#CURRENT BALANCE#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>*ESCROWS:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <input type="text" control="input" class="form-control" field-name="ESCROWS" name="ESCROWS" value="(#ESCROWS#)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Eighth Row -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>NEW LOAN AMOUNT:</b>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>TOTAL PMT W/ ESC:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <input type="text" control="input" class="form-control" field-name="TOTAL PMT W/ ESC" name="TOTAL PMT W/ ESC" value="(#TOTAL PMT W/ ESC#)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ninth Row -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b>NEW PAYMENTS:</b>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-sm-6 text-right">
+                                            <b style="color: #00b050">TOTAL SAVINGS:</b>
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <input type="text" control="input" class="form-control" field-name="TOTAL PMT W/ ESC" name="TOTAL PMT W/ ESC" value="(#TOTAL PMT W/ ESC#)" style="color: #00b050">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tenth Row -->
+                            <div class="row">
+                                <div class="col-sm-6"></div>
+                                <div class="col-sm-6">
+                                    <table class="table table-bordered text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="bg-light-red">Interest Savings</th>
+                                                <th class="bg-light-blue">Add't Princpal</th>
+                                                <th class="bg-light-grey">Gross Mon Benefits</th>
+                                                <th class="bg-light-yellow">PRIN to PMT Ratio</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>3</td>
+                                                <td>4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--# END LOAN SECTION #-->
+
+                            <!--# Start PRIMARY BORROWER Section #-->
+                            <!-- Eleventh Row -->
+                            <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <h4 class="text-underline">PRIMARY BORROWER:</h4>
+                                </div>
+                            </div>
+
+                            <!-- Twelfth Row -->
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4 text-right">
+                                            <b>FIRST:</b>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4 text-right">
+                                            <b>LAST:</b>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thirteenth Row -->
+                            <div class="row">
+                                <div class="col-sm-6 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4 text-right">
+                                            <b>PHONE NUMBER:</b>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-4 text-right">
+                                            <b>MOBILE:</b>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-2 text-right">
+                                            <b>EMAIL:</b>
+                                        </div>
+                                        <div class="col-sm-10">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-2 text-right">
+                                            <b>ADDRESS:</b>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
+                                                <option value="PRIMARY">PRIMARY</option>
+                                                <option value="INVESTMENT">INVESTMENT</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    <b>HOW LONG:</b>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-2 text-right">
+                                            <b>CITY:</b>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    <b>STATE:</b>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    <b>ZIP:</b>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Fourteenth Row -->
+                            <!-- # IF LESS THEN TWO (2) YEARS PLEASE LIST PREVIOUS ADDRESSES # -->
+                            <div id="less-then-two">
+                                <div class="text-center mt-2 mb-3">
+                                    <b>IF LESS THEN TWO (2) YEARS PLEASE LIST PREVIOUS ADDRESSES</b>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-2 text-right">
+                                                <b>ADDRESS:</b>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
+                                                    <option value="RENTED">RENTED</option>
+                                                    <option value="OWNED">OWNED</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="row">
+                                                    <div class="col-sm-6 text-right">
+                                                        <b>HOW LONG:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-2 text-right">
+                                                <b>CITY:</b>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="row">
+                                                    <div class="col-sm-6 text-right">
+                                                        <b>STATE:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="row">
+                                                    <div class="col-sm-6 text-right">
+                                                        <b>ZIP:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-2 text-right">
+                                                <b>ADDRESS:</b>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
+                                                    <option value="RENTED">RENTED</option>
+                                                    <option value="OWNED">OWNED</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <div class="row">
+                                                    <div class="col-sm-6 text-right">
+                                                        <b>HOW LONG:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                <div class="col-sm-12 form-group">
+                                    <div class="row">
+                                        <div class="col-sm-2 text-right">
+                                            <b>CITY:</b>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    <b>STATE:</b>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="row">
+                                                <div class="col-sm-6 text-right">
+                                                    <b>ZIP:</b>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 form-group text-right">
+                                                <b>MARITAL STATUS:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 form-group text-right">
+                                                <b>DEPENDENTS:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6"></div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 form-group text-right">
+                                                <b>AGES:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 form-group text-right">
+                                                <b class="text-red">*SOCIAL SECURITY:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 form-group text-right">
+                                                <b>*DOB:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="row">
+                                                    <div class="col-sm-6 form-group text-right">
+                                                        <b>RETIRED:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
+                                                            <option value="Caliber">YES</option>
+                                                            <option value="Nationstar">NO</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="row">
+                                                    <div class="col-sm-6 form-group text-right">
+                                                        <b>HOW LONG:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 form-group text-right">
+                                                <b>*FICOS:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="row">
+                                                    <div class="col-sm-6 form-group text-right">
+                                                        <b>BRANCH:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <select field-name="CURRENT LENDER" class="form-control" name="CURRENT LENDER">
+                                                            <option value="ARMY">ARMY</option>
+                                                            <option value="NAVY">NAVY</option>
+                                                            <option value="AIR FORCE">AIR FORCE</option>
+                                                            <option value="MARINES">MARINES</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="row">
+                                                    <div class="col-sm-6 form-group text-right">
+                                                        <b>YEARS SERVED:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- # END IF LESS THEN TWO (2) YEARS PLEASE LIST PREVIOUS ADDRESSES # -->
+
+                            <!-- Fifteenth Row -->
+                            <!-- # TWO (2) YEARS OF EMPLOYMENT NEEDED # -->
+                            <div id="years-of-employment">
+                                <div class="text-center text-red my-2">
+                                    TWO (2) YEARS OF EMPLOYMENT NEEDED
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="row form-group">
+                                            <div class="col-sm-4 text-right">
+                                                <b>CURRENT EMPLOYER:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="row form-group">
+                                            <div class="col-sm-6 text-right">
+                                                <b>HOW LONG:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div class="row form-group">
+                                            <div class="col-sm-3 text-right">
+                                                <b>ADDRESS:</b>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="row form-group">
+                                            <div class="col-sm-4 text-right">
+                                                <b>PHONE:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="row form-group">
+                                            <div class="col-sm-4 text-right">
+                                                <b>PRIOR EMPLOYER:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="row form-group">
+                                            <div class="col-sm-6 text-right">
+                                                <b>HOW LONG:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-7">
+                                        <div class="row form-group">
+                                            <div class="col-sm-3 text-right">
+                                                <b>ADDRESS:</b>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="row form-group">
+                                            <div class="col-sm-4 text-right">
+                                                <b>PHONE:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sixteenth Row -->
+                            <!-- IF RETIRED TWO (2) YEARS PROOF OF INCOME NEEDED  -->
+                            <div id="years-proof-income-needed">
+                                <div class="text-center text-red my-2">
+                                    IF RETIRED TWO (2) YEARS PROOF OF INCOME NEEDED
+                                </div>
+                                <div class="form-group">
+                                    <b>CO-BORROWER</b>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-4 text-right">
+                                                <b>FIRST:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-4 text-right">
+                                                <b>LAST:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 text-right">
+                                                <b>PHONE NUMBER:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-4 text-right">
+                                                <b>EMAIL:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12"><br></div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 text-right">
+                                                <b>PHONE NUMBER:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-4 text-right">
+                                                <b>FICOS:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 text-right">
+                                                <b>DATE OF BIRTH:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="row">
+                                            <div class="col-sm-6 form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-6 text-right">
+                                                        <b>RETIRED:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-6 text-right">
+                                                        <b>HOW LONG:</b>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12"><br></div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 text-right">
+                                                <b>APPOINTMENT DATE:</b>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6 form-group">
+                                        <div class="row">
+                                            <div class="col-sm-4 text-right">
+                                                <b>APPOINTMENT TIME:</b>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" control="input" class="form-control" field-name="NEW LOAN AMOUNT" name="NEW LOAN AMOUNT" value="(#NEW LOAN AMOUNT#)">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-3 text-right">
+                                        <b>SPECIAL INSTRUCTIONS:</b>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <textarea name="Current Insurance Info" field-name="SPECIAL INSTRUCTIONS">(#SPECIAL INSTRUCTIONS#)</textarea>
+                                    </div>
+
+                                    <div class="col-sm-12"><br><br><br></div>
+                                </div>
                             </div>
                         </form>
                     </div>
