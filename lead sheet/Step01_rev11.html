@@ -296,7 +296,7 @@
                                             <b>TOTAL PMT W/ ESC:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Total PmtEsc" name="Total PmtEsc" value="(#Total PmtEsc#)">
+                                            <input type="text" control="input" class="form-control" field-name="Total PmtEsc" name="Total PmtEsc" value="(#Total PmtEsc#)" id="Total_PmtEsc">
                                         </div>
                                     </div>
                                 </div>
@@ -310,7 +310,7 @@
                                             <b>NEW PAYMENTS:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="New Payments" name="New Payments" value="(#New Payments#)">
+                                            <input type="text" control="input" class="form-control" field-name="New Payments" name="New Payments" value="(#New Payments#)" id="New_Payments">
                                         </div>
                                     </div>
                                 </div>
@@ -1725,9 +1725,21 @@
     function MonthlyPayment() {
         document.getElementById('Monthly_Payment').value = parseInt2(document.getElementById('CurrentPI').value) + parseInt2(document.getElementById('Escrows').value);
     }
+    
+    // Calculate the Total PmtEsc
+    function TotalPmtEsc() {
+        document.getElementById('Total_PmtEsc').value = parseInt2(document.getElementById('New_Payments').value) + parseInt2(document.getElementById('Escrows').value);
+    }
 
     (function () {
+        // Event to calculate the Monthly Payment
         document.getElementById('CurrentPI').addEventListener('change', MonthlyPayment);
         document.getElementById('Escrows').addEventListener('change', MonthlyPayment);
+
+        // Event to calculate the Total PmtEsc
+        document.getElementById('Escrows').addEventListener('change', TotalPmtEsc);
+        document.getElementById('New_Payments').addEventListener('change', TotalPmtEsc);
+
+
     })();
 </script>
