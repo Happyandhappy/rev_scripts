@@ -17,14 +17,6 @@
                     <div class="col-sm-12">
                         <h3 class="text-center mb-5">Lead Sheet</h3>
                         <form control="form" class="dynamic-form" id="form">
-                            <input type="hidden" control="input" name="SoldAgentList" id="SoldAgentList" value="Randy Zammatta,Yolanda Pitzer,Jamie Scott,Patrick McAllister,Nytaea Gholson,Myeshia Foreman,Melissa Erler,Mary Taylor,LeAnne Rumbel,Jack Dyke,Kathrine Avedician,DYNAMIC HQ,Alexes Hayes,Michelle Carrol,Mason Jackson,Mark Ross,James Cummings,Jeff Gifford,Ivan Dazil,Bob Young,Kathy Glover,Phillip Minor,Cheryl McVaney,Joe Williams,Brian Livesay,Corey Adkins,Michelle K.,D-Nylle Smith,Kenyetta M.,Shynara W.,Jamie Dilard">
-
-                            <button class="button hidden submit1" id="submit">SAVE</button>
-                            <input type="submit" control="submit" action="submit_and_email_template" email-to="Email" email-template="(#email_selected#)" value="Submit and Email" class="button hidden submit">
-                            <!-- <button id="pre" class="button hidden pre">PREVIOUS</button> -->
-
-                            <input type="submit" control="submit" action="submit_and_navigate" navigate-to="ASR Script_rev5" value="ASR Script_rev5" class="button hidden ASR_script_rev5">
-
 
                             <!--First Row-->
                             <div class="row">
@@ -1054,6 +1046,9 @@
                                             </tbody>
                                         </table>
                                     </div>
+                                    <div class="col-sm-12 form-group">
+                                        <button class="button">SAVE</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -1590,7 +1585,6 @@
         margin-top: 5px;
         width: 140px;
         height: 30px;
-        float: right;
     }
     
     .button:active {
