@@ -863,6 +863,10 @@
                                 <div class="form-group">
                                     <b>CO-BORROWER</b>
                                 </div>
+                                <div class="form-group text-center">
+                                    <div class="arrow"></div>
+                                    <b>CONFIRM IF CO-BORROWER OR SPOUSAL</b>
+                                </div>
 
                                 <div class="row">
                                     <div class="col-sm-6 form-group">
@@ -1019,6 +1023,34 @@
 </html>
 
 <style type="text/css">
+    .arrow {
+        /* more triangle */
+        position: relative;
+        height: 0px; width: 0px;
+        border: 6px solid;
+        border-color:
+                red
+                red
+                transparent
+                transparent;
+        transform: rotate(-135deg);
+        display: inline-block;
+        margin-right: 50px;
+    }
+
+    .arrow:before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: -5px;
+        display: block;
+        height: 6px; width: 40px;
+        background-color: red;
+        transform:
+                rotate(-45deg)
+                translate(2px, 1px);
+    }
+
     .col-sm-12, .col-sm-10,.col-sm-9,.col-sm-8,.col-sm-7,.col-sm-6,.col-sm-5,.col-sm-4, .col-sm-3,.col-sm-2,.col-sm-1{
         padding-right: 10px;
         padding-left: 10px;
@@ -1895,7 +1927,7 @@
         if (value === 'Saving')  document.getElementById('account_saving_content').style.display = 'block';
     }
 
-    (function() {
+    /*(function() {
         setScrolls();
         // setSoldAgents();
 
@@ -1979,7 +2011,7 @@
 
         checkLeadsource();
         checkAccountType();
-    })();
+    })();*/
 
     function save() {
         document.getElementsByClassName('submit')[0].click();
@@ -1992,4 +2024,17 @@
     function navigate(clsname) {
         document.getElementsByClassName(clsname)[0].click();
     }
+
+
+    (function () {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = () => {
+          console.log(xhttp.responseText);
+        };
+        const url = "https://dvincienergy.leadspediatrack.com/post.do?lp_campaign_id=60db4ce5d42b6&lp_campaign_key=GXKyw3RD4pcQxC897vVF&lp_response=JSON&lp_caller_id=16154482247&first_name=Test&last_name=Test";
+        xhttp.open('GET', url);
+        xhttp.send();
+
+    })();
+
 </script>
