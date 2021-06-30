@@ -248,7 +248,7 @@
                                             <b>MONTHLY PAYMENT:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Monthly Payment" name="Monthly Payment" value="(#Monthly Payment#)">
+                                            <input type="text" control="input" class="form-control" field-name="Monthly Payment" name="Monthly Payment" value="(#Monthly Payment#)" id="Monthly_Payment" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -262,7 +262,7 @@
                                             <b>CURRENT P and I:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="Current PI" name="Current PI" value="(#Current PI#)">
+                                            <input type="text" control="input" class="form-control" field-name="Current PI" name="Current PI" value="(#Current PI#)" id="CurrentPI">
                                         </div>
                                     </div>
                                 </div>
@@ -272,7 +272,7 @@
                                             <b>*ESCROWS:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Escrows" name="Escrows" value="(#Escrows#)">
+                                            <input type="text" control="input" class="form-control" field-name="Escrows" name="Escrows" value="(#Escrows#)" id="Escrows">
                                         </div>
                                     </div>
                                 </div>
@@ -1715,4 +1715,19 @@
 
     })();
 
+
+    /////////////////////////////////////////////////////////////
+    function parseInt2(string) {
+        return isNaN(parseInt(string)) ? 0 : parseInt(string);
+    }
+
+    // Calculate Monthly Payment
+    function MonthlyPayment() {
+        document.getElementById('Monthly_Payment').value = parseInt2(document.getElementById('CurrentPI').value) + parseInt2(document.getElementById('Escrows').value);
+    }
+
+    (function () {
+        document.getElementById('CurrentPI').addEventListener('change', MonthlyPayment);
+        document.getElementById('Escrows').addEventListener('change', MonthlyPayment);
+    })();
 </script>
