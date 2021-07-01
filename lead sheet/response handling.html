@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://www.chasedatacorp.com/assets/css/font-awesome.min.css" rel="stylesheet">
+        <link id="main-sheet" rel="stylesheet" href="http://www.chasedatacorp.com/assets/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div style="background-color: #f0f0f0; position:absolute; height: 100%; width: 100%;"></div>
+        <div class="container">
+
+            <div class="col-sm-12 mt-5">
+                <h3 class="text-center mb-5">Response Handling</h3>
+            </div>
+            <!-- Success Content -->
+            <div class="col-sm-12">
+                <div class="modal-dialog" style="display: none" id="modal">
+                    <div class="modal-content">
+                        <div class="modal-header" id="modal-header">
+                            <h5 class="modal-title" id="modal-title"></h5>
+                        </div>
+                        <div class="modal-body">
+                            <p id="msg"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" onclick="closeModal()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="hidden" value="https://dvincienergy.leadspediatrack.com/post.do?lp_campaign_id=60db4ce5d42b6&lp_campaign_key=GXKyw3RD4pcQxC897vVF&lp_response=JSON&lp_caller_id=16154482247&first_name=Test&last_name=Test" id="URL">
+
+        </div>
+    </body>
+</html>
+
+<style>
+    .mt-5 {
+        margin-top: 2.5rem;
+    }
+
+    .mt-3 {
+        margin-top: 1.5rem;
+    }
+
+    .modal-header {
+        color: white;
+    }
+
+    .modal-header.success {
+        background-color: rgb(44, 174, 213);
+    }
+
+    .modal-header.failed {
+        background-color: rgb(223, 56, 35);
+    }
+</style>
+
+<script>
+    // Hide modal content
+    function closeModal() {
+        document.getElementById('modal').style['display'] = 'none';
+    }
+
+    function CopyToClipboard(text) {
+        const input = document.createElement('input');
+        document.body.appendChild(input);
+        input.value = text;
+        input.focus();
+        input.select();
+        document.execCommand('copy');
+        setTimeout(function () {
+            input.remove();
+        }, 500);
+    }
+
+    // Show Result
+    function processResult(res) {
+        document.getElementById('modal-header').classList.remove('failed');
+        document.getElementById('modal-header').classList.remove('success');
+        document.getElementById('modal-header').classList.add(res.result);
+
+        if (res.result === 'success'){
+            document.getElementById('msg').innerHTML = 'The Lead has been delivered to the client <br> Buyer: ' + res.advertisers[0].advertiser.advertiserName;
+            if (res.advertisers[0].advertiser.transfer_number !== ''){
+                document.getElementById('modal-title').innerText = 'Live Transfer';
+
+                // copy the transfer_number to clipboard here.
+                CopyToClipboard("chase:conference_call#" + res.advertisers[0].advertiser.transfer_number.substring(1))
+
+            } else {
+                document.getElementById('modal-title').innerText = 'Lead Deliverd';
+            }
+        } else {
+            document.getElementById('modal-title').innerText = 'Post Failed';
+            document.getElementById('msg').innerHTML = 'Lead Rejected <br> No Match';
+        }
+
+        document.getElementById('modal').style['display'] = 'block';
+    }
+
+    // Submit Form
+    function Submit() {
+        var endpoint = document.getElementById('URL').value;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = () => {
+            const res = JSON.parse(xhttp.responseText);
+            processResult(res)
+        };
+
+        xhttp.open('POST', endpoint, true);
+        xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhttp.send();
+    }
+
+    (function () {
+        Submit();
+    })();
+</script>

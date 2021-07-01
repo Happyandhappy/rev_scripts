@@ -1569,12 +1569,8 @@
         document.getElementById('CurrentPI').addEventListener('change', TotalSaving);
         document.getElementById('New_Payments').addEventListener('change', TotalSaving);
 
-        // Event to calculate to month difference the Date
-        document.getElementById('Original_Loan_Date').addEventListener('change', monthDiff);
-        document.getElementById('CurrentDate').addEventListener('change', monthDiff);
-
-        // Event to calculate to days difference
-        document.getElementById('Original_Loan_Date').addEventListener('change', daysDiff);
-        document.getElementById('CurrentDate').addEventListener('change', daysDiff);
+        // Event to calculate to month and days difference
+        document.getElementById('Original_Loan_Date').addEventListener('change', () => { monthDiff(); daysDiff();});
+        document.getElementById('CurrentDate').addEventListener('change', () => { monthDiff(); daysDiff();});
     })();
 </script>
