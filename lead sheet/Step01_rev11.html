@@ -1038,9 +1038,9 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1</td>
+                                                    <td id="Months_Diff">0</td>
                                                     <td style="width: 150px">Months <br> Till Today</td>
-                                                    <td>4</td>
+                                                    <td id="Days_Diff">0</td>
                                                     <td style="width: 150px">Days <br> Till</td>
                                                 </tr>
                                             </tbody>
@@ -1525,6 +1525,36 @@
         document.getElementById('Total_Savings').value = parseInt2(document.getElementById('New_Payments').value) - parseInt2(document.getElementById('CurrentPI').value);
     }
 
+    // Calculate the Months Calculator
+    function monthDiff() {
+        const isValidDate = dateObject => new Date(dateObject ).toString() !== 'Invalid Date';
+
+        var months = 0;
+        const d1 = new Date(document.getElementById('Original_Loan_Date').value);
+        const d2 = new Date(document.getElementById('CurrentDate').value);
+
+        if (isValidDate(d1) && isValidDate(d2)){
+            months = (d2.getFullYear() - d1.getFullYear()) * 12;
+            months -= d1.getMonth();
+            months += d2.getMonth();
+        }
+        document.getElementById('Months_Diff').innerText = months < 0 ? 0:  months;
+    }
+
+    // Calculate the Days Calculator
+    function daysDiff() {
+        const isValidDate = dateObject => new Date(dateObject ).toString() !== 'Invalid Date';
+
+        var Difference_In_Time = 0;
+        const d1 = new Date(document.getElementById('Original_Loan_Date').value);
+        const d2 = new Date(document.getElementById('CurrentDate').value);
+
+        if (isValidDate(d1) && isValidDate(d2)){
+            Difference_In_Time  = d2.getTime() - d1.getTime();
+        }
+        document.getElementById('Days_Diff').innerText = Difference_In_Time < 0 ? 0 : Difference_In_Time / (1000 * 3600 * 24);
+    }
+
     (function () {
         // Event to calculate the Monthly Payment
         document.getElementById('CurrentPI').addEventListener('change', MonthlyPayment);
@@ -1539,5 +1569,12 @@
         document.getElementById('CurrentPI').addEventListener('change', TotalSaving);
         document.getElementById('New_Payments').addEventListener('change', TotalSaving);
 
+        // Event to calculate to month difference the Date
+        document.getElementById('Original_Loan_Date').addEventListener('change', monthDiff);
+        document.getElementById('CurrentDate').addEventListener('change', monthDiff);
+
+        // Event to calculate to days difference
+        document.getElementById('Original_Loan_Date').addEventListener('change', daysDiff);
+        document.getElementById('CurrentDate').addEventListener('change', daysDiff);
     })();
 </script>
