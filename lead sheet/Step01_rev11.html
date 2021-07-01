@@ -48,7 +48,7 @@
                                             <b>DATE:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="date" control="input" class="form-control" field-name="CurrentDate" name="CurrentDate" value="(#CurrentDate#)">
+                                            <input type="date" control="input" class="form-control" field-name="CurrentDate" name="CurrentDate" value="(#CurrentDate#)" id="CurrentDate">
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +214,7 @@
                                             <b>* ORIGINAL LOAN DATE:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="date" control="input" class="form-control" field-name="Original Loan Date" name="Original Loan Date" value="(#Original Loan Date#)">
+                                            <input type="date" control="input" class="form-control" field-name="Original Loan Date" name="Original Loan Date" value="(#Original Loan Date#)" id="Original_Loan_Date">
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +320,7 @@
                                             <b style="color: #00b050">TOTAL SAVINGS:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Total Savings" name="Total Savings" value="(#Total Savings#)" style="color: #00b050">
+                                            <input type="text" control="input" class="form-control" field-name="Total Savings" name="Total Savings" value="(#Total Savings#)" style="color: #00b050" id="Total_Savings">
                                         </div>
                                     </div>
                                 </div>
@@ -1500,222 +1500,6 @@
 </style>
 
 <script type="text/javascript">
-    function planSet(company) {
-
-        var plans = {
-            "Royal Neighbors of America": ["Simplified Issue Whole Life", "Graded Death Benefit"],
-            "Baltimore Life": ["Silver Guard 1", "Silver Guard 2", "Silver Guard 3"],
-            "Liberty Bankers Life": ["Preferred", "Standard", "Modified Whole Life"],
-            "American General": ["American General"],
-            "Great Western": ["Assurance Plus", "Guaranteed Assurance"],
-            "Foresters": ["PlanRight Level", "PlanRight Graded", "PlanRight Modified"],
-            "Prosperity": ["New Vista Level", "New Vista Graded", "New Vista Modified"],
-            "5Star Life": ["Terminal Illness", "Critical Illness"]
-        }
-
-        try {
-            if (plans[company].length < 0) return;
-        } catch (e) {
-            return;
-        }
-        var planValue = document.getElementById('Plan').value;
-
-
-        var selects, index;
-        selects = document.getElementsByName("Plan");
-        for (var i = 0; i < selects.length; i++) {
-            selects[i].innerHTML = "";
-            var html = "";
-            if (selects[i].className == "plan") continue;
-
-            for (var j = 0; j < plans[company].length; j++) {
-                if (j == 0 || plans[company][j] == planValue)
-                    html += "<option value='" + plans[company][j] + "' selected=''>" + plans[company][j] + "</option>";
-                else
-                    html += "<option value='" + plans[company][j] + "'>" + plans[company][j] + "</option>";
-            }
-            selects[i].innerHTML = html;
-        }
-        document.getElementById('Plan').value = selects[1].value;
-        document.getElementsByClassName('plan')[0].value = selects[1].value;
-    }
-
-    function setSoldAgents(){
-        var SoldAgentList = document.getElementById('SoldAgentList').value;
-        var agents = SoldAgentList.split(",");
-        agents.sort(); // sort agents
-        selects = document.getElementsByName('Sold Agent');
-        innerHTML = '<option value="(#Sold Agent#)" selected="" hidden="">(#Sold Agent#)</option>';
-        
-        for (i = 0 ; i < agents.length; i++){
-            innerHTML += "<option value='" + agents[i] + "'>" + agents[i] + "</option>";
-        }
-        for (i = 0; i < selects.length; i++){
-            selects[i].innerHTML = innerHTML;
-        }
-    }
-    
-    // set the positions of scrollbars
-    function setScrolls(){
-        page = parseInt(document.getElementById('page').value);
-        scrolltop1 = document.getElementById('scroll1').value;
-        scrolltop2 = document.getElementById('scroll2').value;
-        
-        if (page == 1){
-            document.getElementsByClassName('leftSide')[0].scrollTop = scrolltop1;
-            document.getElementsByClassName('rightSide')[0].scrollTop = scrolltop2;
-        }
-        document.getElementById('page').value = 1;
-        
-        document.getElementsByClassName('leftSide')[0].addEventListener('scroll', function(){
-            scrolltop1 = this.scrollTop;
-            document.getElementById('scroll1').value = scrolltop1;
-        });
-        
-        document.getElementsByClassName('rightSide')[0].addEventListener('scroll', function(){
-            scrolltop2 = this.scrollTop;
-            document.getElementById('scroll2').value = scrolltop2;
-        });
-    }
-
-    function checkStatus() {
-        var selects = document.getElementsByName('Carrier Product 2');
-        names = ['American General', 'Great Western'];
-        for (i = 0 ; i < names.length; i++)
-            if (selects[selects.length - 1].value == names[i]) return true;        
-        return false;
-    }
-
-    // check leadsource value and show contents
-    function checkLeadsource(){
-        var value = document.getElementsByName('LeadSource')[0].value;
-        document.getElementById('ledsource_tel').style.display = 'none';
-        document.getElementById('ledsource_face').style.display = 'none';
-
-        if (value === 'Telephone') document.getElementById('ledsource_tel').style.display = 'block';
-        if (value === 'Facebook')  document.getElementById('ledsource_face').style.display = 'block';
-    }
-
-    function checkAccountType(){
-        var value = document.getElementsByName('Account Type')[0].value;
-        document.getElementById('account_saving_content').style.display = 'none';
-        document.getElementById('account_checking_content').style.display = 'none';
-
-        if (value === 'Checking') document.getElementById('account_checking_content').style.display = 'block';
-        if (value === 'Saving')  document.getElementById('account_saving_content').style.display = 'block';
-    }
-
-    /*(function() {
-        setScrolls();
-        // setSoldAgents();
-
-        var names = ['Gender', 'App Status', 'Carrier Product 2', 'Account Type', 'Plan', 'Sold Agent', 'Dental Plan', 'Dental Coverage', 'Vision Coverage'];
-        var ids = ['Gender', 'AppStatus', 'CarrierProduct2', 'AccountType', 'Plan', 'SoldAgent', 'DentalPlan', 'DentalCoverage', 'VisionCoverage'];
-
-        var inputs, index, name, notes, selects;
-        for (var i = 0; i < names.length; i++) {
-            selects = document.getElementsByName(names[i]);
-
-            var selectValue = document.getElementById(ids[i]).value;            
-            //if (names[i]=="Carrier Product 2" && selectValue == "")
-                //selectValue = "Royal Neighbors of America";
-
-            for (index = 0; index < selects.length; index++) {
-                if (selectValue !="")
-                    selects[index].value = selectValue;
-                else
-                    selects[index].selectedIndex = 0;
-            }
-            if (names[i] == "Carrier Product 2") planSet(selectValue);
-        }
-
-        inputs = document.getElementsByTagName('input');
-        for (index = 0; index < inputs.length; ++index) {
-            name = inputs[index].getAttribute("name");
-
-            inputs[index].addEventListener("input", function(e) {
-                var tag_name = e.target.getAttribute('name');
-                var value = e.target.value;
-                var tags = document.getElementsByName(tag_name);
-                for (var i = 0; i < tags.length; i++)
-                    tags[i].value = value;
-            });
-        }
-
-        notes = document.getElementsByTagName('textarea');
-        for (index = 0; index < notes.length; index++) {
-            notes[index].addEventListener('input', function(e) {
-                var tag_name = e.target.getAttribute('name');
-                var value = e.target.value;
-                var tags = document.getElementsByName(tag_name);
-                for (var i = 0; i < tags.length; i++) {
-                    tags[i].value = value;
-                }
-            });
-        }
-
-        selects = document.getElementsByTagName('select');
-        for (index = 0; index < selects.length; index++) {
-            selects[index].addEventListener('change', function(e) {
-                var tag_name = e.target.getAttribute('name');
-                var value = e.target.value;
-                var tags = document.getElementsByName(tag_name);
-                for (var i = 0; i < tags.length; i++) {
-                    tags[i].value = value;
-                }
-
-                if (tag_name === 'LeadSource') checkLeadsource();
-                if ( tag_name === 'Account Type') checkAccountType();
-
-                if (tag_name == "Plan" || tag_name == "Carrier Product 2") {
-                    document.getElementsByName('email_selected')[0].value = document.getElementsByName('Carrier Product 2')[0].value + '_' + document.getElementsByName('Plan')[0].value;
-                }
-                if (tag_name == "Carrier Product 2") planSet(value);
-            });
-        }
-
-        for (index = 1; index <= 10; index++) {
-            if (index == 1) continue;
-            document.getElementById('step' + index).addEventListener('click', function(e) {
-                var id = e.target.id;
-                
-                if (checkStatus() && id === 'step9' || id === 'step8'){
-                    return;
-                }
-                document.getElementsByClassName(id)[0].click();
-            });
-        }
-
-
-        checkLeadsource();
-        checkAccountType();
-    })();*/
-
-    function save() {
-        document.getElementsByClassName('submit')[0].click();
-    }
-
-    function next() {
-        document.getElementsByClassName('next')[0].click();
-    }  
-
-    function navigate(clsname) {
-        document.getElementsByClassName(clsname)[0].click();
-    }
-
-
-    (function () {
-        const xhttp = new XMLHttpRequest();
-        xhttp.onload = () => {
-          console.log(xhttp.responseText);
-        };
-        const url = "https://dvincienergy.leadspediatrack.com/post.do?lp_campaign_id=60db4ce5d42b6&lp_campaign_key=GXKyw3RD4pcQxC897vVF&lp_response=JSON&lp_caller_id=16154482247&first_name=Test&last_name=Test";
-        xhttp.open('GET', url);
-        xhttp.send();
-
-    })();
-
-
     /////////////////////////////////////////////////////////////
     function parseInt2(string) {
         return isNaN(parseInt(string)) ? 0 : parseInt(string);
@@ -1731,6 +1515,16 @@
         document.getElementById('Total_PmtEsc').value = parseInt2(document.getElementById('New_Payments').value) + parseInt2(document.getElementById('Escrows').value);
     }
 
+    // Calculate the New Payment
+    function NewPayment() {
+
+    }
+
+    // Calculate the Total Saving
+    function TotalSaving() {
+        document.getElementById('Total_Savings').value = parseInt2(document.getElementById('New_Payments').value) - parseInt2(document.getElementById('CurrentPI').value);
+    }
+
     (function () {
         // Event to calculate the Monthly Payment
         document.getElementById('CurrentPI').addEventListener('change', MonthlyPayment);
@@ -1740,6 +1534,10 @@
         document.getElementById('Escrows').addEventListener('change', TotalPmtEsc);
         document.getElementById('New_Payments').addEventListener('change', TotalPmtEsc);
 
+
+        // Event to calculate to TotalSavings
+        document.getElementById('CurrentPI').addEventListener('change', TotalSaving);
+        document.getElementById('New_Payments').addEventListener('change', TotalSaving);
 
     })();
 </script>
