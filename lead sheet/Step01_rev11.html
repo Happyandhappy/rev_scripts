@@ -1508,7 +1508,9 @@
         document.getElementById('GrossMonBenefits').innerText = grossBenefit.toFixed(2);
         document.getElementById('PrinToPMTRatio').innerText = (PtoPRatio * 100).toFixed(2) + '%';
 
-        document.getElementById('NewPayments').innerText = newPayment.toFixed(2);
+        document.getElementById('NewPayments').value = newPayment.toFixed(2);
+
+        TotalSaving();
     }
 
     // Calculate the Total Saving
@@ -1529,7 +1531,11 @@
             months -= d1.getMonth();
             months += d2.getMonth();
         }
-        document.getElementById('Months_Diff').innerText = months < 0 ? 0:  months;
+
+        if ((d2.getTime() - d1.getTime()) / (1000 * 3600 * 24) < 30)
+            months -= 1;
+
+        document.getElementById('Months_Diff').innerText = months < 0 ? 0: months;
     }
 
     // Calculate the Days Calculator
@@ -1565,14 +1571,13 @@
 
         // Event to calculate to TotalSavings
         document.getElementById('CurrentPI').addEventListener('change', TotalSaving);
-        document.getElementById('NewPayments').addEventListener('change', TotalSaving);
 
         // Event to calculate to month and days difference
         document.getElementById('Original_Loan_Date').addEventListener('change', () => { monthDiff(); daysDiff();});
         document.getElementById('CurrentDate').addEventListener('change', () => { monthDiff(); daysDiff();});
 
         ['OriginalBalance', 'CurrentTerm', 'CurrentRate', 'NewLoanAmount', 'OfferedTerm', 'OfferedRate'].forEach(id => {
-            document.getElementById(id).addEventListener('change', NewPayment());
+            document.getElementById(id).addEventListener('change', NewPayment);
         });
 
         ['Tax', 'Insurance'].forEach(id => {
