@@ -346,11 +346,15 @@
                                         </tr>
                                         <tr>
                                             <td class="text-right">INSURANCE:</td>
-                                            <td>$ 0</td>
+                                            <td>
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Insurance" name="Insurance" value="(#Insurance#)" id="Insurance">
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td class="text-right">ESCROWS:</td>
-                                            <td>$ 0</td>
+                                            <td>
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom"  id="CalculatedEscrows">
+                                            </td>
                                         </tr>
                                         </tbody>
                                     </table>
@@ -1541,6 +1545,13 @@
         }
         document.getElementById('Days_Diff').innerText = Difference_In_Time < 0 ? 0 : Difference_In_Time / (1000 * 3600 * 24);
     }
+    
+    function CalEscrow() {
+        const tax = parseFloat(parseInt2(document.getElementById('Tax').value));
+        const insurance = parseFloat(parseInt2(document.getElementById('Insurance').value));
+
+        document.getElementById('CalculatedEscrows').value = (tax / 12 - insurance).toFixed(2);
+    }
 
     (function () {
         // Event to calculate the Monthly Payment
@@ -1561,89 +1572,12 @@
         document.getElementById('CurrentDate').addEventListener('change', () => { monthDiff(); daysDiff();});
 
         ['OriginalBalance', 'CurrentTerm', 'CurrentRate', 'NewLoanAmount', 'OfferedTerm', 'OfferedRate'].forEach(id => {
-            document.getElementById(id).addEventListener('change', () => { NewPayment(); });
+            document.getElementById(id).addEventListener('change', NewPayment());
+        });
+
+        ['Tax', 'Insurance'].forEach(id => {
+            document.getElementById(id).addEventListener('change', CalEscrow);
         });
 
     })();
 </script>
-
-
-
-
-
-Prefix
-AccountName
-CurrentDate
-LoanType
-Creditor
-Va Disability
-Current Lender
-Current Rate
-Current Term
-Current Product
-Offered Rate
-Offered Term
-Offered Product
-Original Loan Date
-Original Balance
-Current Balance
-Monthly Payment
-Current PI
-Escrows
-New Loan Amount
-Total PmtEsc
-New Payments
-Total Savings
-FirstName
-LastName
-PhoneNumber
-MobileNumber
-Email
-Address
-AddressType
-Period
-City
-State
-Zip
-Address2
-AddressType2
-Period2
-City2
-State2
-Zip2
-Address3
-AddressType3
-Period3
-City3
-State3
-Zip3
-Marital Status
-Dependents
-Ages
-Social Security
-DOB
-Retired
-Retired Period
-Ficos
-Branch
-Years Served
-Current Employer
-Current Employer Period
-Current Employer Address
-Current Employer Phone
-Prior Employer
-Prior Employer Period
-Prior Employer Address
-Prior Employer Phone
-Co Borrower FirstName
-Co Borrower LastName
-Co Borrower PhoneNumber
-Co Borrower Email
-Co Borrower Social Security
-Co Borrower Ficos
-Co Borrower DOB
-Co Borrower Retired
-Co Borrower Period
-Appointment Date
-Appointment Time
-Special Instructions
