@@ -135,7 +135,7 @@
                                                     CURRENT RATE:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="Current Rate1" name="Current Rate1" value="(#Current Rate1#)">
+                                                    <input type="text" control="input" class="form-control" field-name="Current Rate" name="Current Rate" value="(#Current Rate#)" id="CurrentRate">
                                                 </div>
                                             </div>
                                         </div>
@@ -145,7 +145,7 @@
                                                     TERM:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="Term1" name="Term1" value="(#Term1#)">
+                                                    <input type="text" control="input" class="form-control" field-name="Current Term" name="Current Term" value="(#Term1#)" id="CurrentTerm">
                                                 </div>
                                             </div>
                                         </div>
@@ -155,8 +155,8 @@
                                                     PRODUCT:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <select field-name="Product1" class="form-control" name="Product1">
-                                                        <option value="(#Product1#)" selected="" hidden="">(#Product1#)</option>
+                                                    <select field-name="Current Product" class="form-control" name="Current Product" id="CurrentProduct">
+                                                        <option value="(#Current Product#)" selected="" hidden="">(#Current Product#)</option>
                                                         <option value="FIXED">FIXED</option>
                                                         <option value="3/1 ARM">3/1 ARM</option>
                                                         <option value="5/1 ARM">5/1 ARM</option>
@@ -170,10 +170,10 @@
                                         <div class="col-sm-4">
                                             <div class="row">
                                                 <div class="col-sm-6 text-right">
-                                                    CURRENT RATE:
+                                                    OFFERED RATE:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="Current Rate2" name="Current Rate2" value="(#Current Rate2#)">
+                                                    <input type="text" control="input" class="form-control" field-name="Offered Rate" name="Offered Rate" value="(#Offered Rate#)" id="OfferedRate">
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +183,7 @@
                                                     TERM:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="Term2" name="Term2" value="(#Term2#)">
+                                                    <input type="text" control="input" class="form-control" field-name="Offered Term" name="Offered Term" value="(#Offered Term#)" id="OfferedTerm">
                                                 </div>
                                             </div>
                                         </div>
@@ -193,8 +193,8 @@
                                                     PRODUCT:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <select field-name="Product2" class="form-control" name="Product2">
-                                                        <option value="(#Product2#)" selected="" hidden="">(#Product2#)</option>
+                                                    <select field-name="Offered Product" class="form-control" name="Offered Product"  id="OfferedProduct">
+                                                        <option value="(#Offered Product#)" selected="" hidden="">(#Offered Product#)</option>
                                                         <option value="FIXED">FIXED</option>
                                                         <option value="3/1 ARM">3/1 ARM</option>
                                                         <option value="5/1 ARM">5/1 ARM</option>
@@ -224,7 +224,7 @@
                                             <b>* ORIGINAL BALANCE:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Original Balance" name="Original Balance" value="(#Original Balance#)">
+                                            <input type="text" control="input" class="form-control" field-name="Original Balance" name="Original Balance" value="(#Original Balance#)" id="OriginalBalance">
                                         </div>
                                     </div>
                                 </div>
@@ -238,7 +238,7 @@
                                             <b>* CURRENT BALANCE:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="Current Balance" name="Current Balance" value="(#Current Balance#)">
+                                            <input type="text" control="input" class="form-control" field-name="Current Balance" name="Current Balance" value="(#Current Balance#)" id="CurrentBalance">
                                         </div>
                                     </div>
                                 </div>
@@ -286,7 +286,7 @@
                                             <b>NEW LOAN AMOUNT:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="New Loan Amount" name="New Loan Amount" value="(#New Loan Amount#)">
+                                            <input type="text" control="input" class="form-control" field-name="New Loan Amount" name="New Loan Amount" value="(#New Loan Amount#)" id="NewLoanAmount">
                                         </div>
                                     </div>
                                 </div>
@@ -341,10 +341,10 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>1</td>
-                                                <td>2</td>
-                                                <td>3</td>
-                                                <td>4</td>
+                                                <td id="InterestSavings"></td>
+                                                <td id="AddtPrincipal"></td>
+                                                <td id="GrossMonBenefits"></td>
+                                                <td id="PrinToPMTRatio"></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1502,27 +1502,105 @@
 <script type="text/javascript">
     /////////////////////////////////////////////////////////////
     function parseInt2(string) {
-        return isNaN(parseInt(string)) ? 0 : parseInt(string);
+        return isNaN(parseFloat(string)) ? 0 : Number.parseFloat(string).toFixed(2);
     }
 
     // Calculate Monthly Payment
     function MonthlyPayment() {
-        document.getElementById('Monthly_Payment').value = parseInt2(document.getElementById('CurrentPI').value) + parseInt2(document.getElementById('Escrows').value);
+        document.getElementById('Monthly_Payment').value = parseFloat(parseInt2(document.getElementById('CurrentPI').value)) + parseFloat(parseInt2(document.getElementById('Escrows').value));
     }
     
     // Calculate the Total PmtEsc
     function TotalPmtEsc() {
-        document.getElementById('Total_PmtEsc').value = parseInt2(document.getElementById('New_Payments').value) + parseInt2(document.getElementById('Escrows').value);
+        document.getElementById('Total_PmtEsc').value = parseFloat(parseInt2(document.getElementById('New_Payments').value)) + parseFloat(parseInt2(document.getElementById('Escrows').value));
+    }
+
+    function calPMT(ir, np, pv) {
+        /*
+         * ir   - interest rate per month
+         * np   - number of periods (months)
+         * pv   - present value
+         * fv   - future value
+         * type - when the payments are due:
+         *        0: end of the period, e.g. end of month (default)
+         *        1: beginning of period
+         */
+        var pmt, pvif;
+
+        if (ir === 0)
+            return ((pv)/np);
+
+        pvif = Math.pow(1 + ir, np);
+        pmt = - ir * (pv * pvif) / (pvif - 1);
+
+        return pmt * -1;
     }
 
     // Calculate the New Payment
     function NewPayment() {
+        // Calculating the VABLA Data
 
+        const enterLoanAmount = parseInt2(document.getElementById('OriginalBalance').value);
+        const enterTermInMonths = parseInt(parseInt2(document.getElementById('CurrentTerm').value));
+        const enterInterestRate = parseInt2(document.getElementById('CurrentRate').value);
+        const enterNewLoanAmount = parseInt2(document.getElementById('NewLoanAmount').value);
+        const enterNewTermInMonths = parseInt2(document.getElementById('OfferedTerm').value);
+        const enterNewInterestRate = parseInt2(document.getElementById('OfferedRate').value);
+
+        if (enterNewLoanAmount == 0 || enterLoanAmount == 0 || enterTermInMonths == 0 || enterNewTermInMonths == 0)
+            return;
+
+        // Current Loan Amortization Table
+        var currentPayment = 0, interest = 0, principal = 0, balance = enterLoanAmount;
+        var currentLoanTableData = [];
+        currentPayment = calPMT(enterInterestRate/1200, enterTermInMonths, enterLoanAmount);
+        for (var i = 0 ; i < enterTermInMonths; i++){
+            interest = (balance * enterInterestRate/1200);
+            principal = (currentPayment - interest);
+            balance = (balance - principal);
+
+            currentLoanTableData.push({
+                payment: currentPayment.toFixed(2),
+                interest: interest.toFixed(2),
+                principal: principal.toFixed(2),
+                balance: balance.toFixed(2),
+            });
+        }
+
+        // New Loan Amortization Table
+        var newLoanTableData = [], newPayment = 0;
+        console.log(enterNewInterestRate/1200, enterNewTermInMonths, enterNewLoanAmount);
+        newPayment = calPMT(enterNewInterestRate/1200, enterNewTermInMonths, enterNewLoanAmount);
+        balance = enterNewLoanAmount;
+        for (var i = 0 ; i < enterNewTermInMonths; i++){
+            interest = (balance * enterNewInterestRate/1200);
+            principal = (newPayment - interest);
+            balance = (balance - principal);
+
+            newLoanTableData.push({
+                payment: parseFloat(newPayment.toFixed(2)),
+                interest: parseFloat(interest.toFixed(2)),
+                principal: parseFloat(principal.toFixed(2)),
+                balance: parseFloat(balance.toFixed(2)),
+            });
+        }
+
+        const newInterest = currentLoanTableData[0].interest - newLoanTableData[0].interest;
+        const newPrincipal = newLoanTableData[0].principal - currentLoanTableData[0].principal;
+        const monthlySaving = newPayment - currentPayment;
+        const grossBenefit = monthlySaving - newLoanTableData[0].principal;
+        const PtoPRatio = grossBenefit / newPayment;
+
+        document.getElementById('InterestSavings').innerText = newInterest.toFixed(2);
+        document.getElementById('AddtPrincipal').innerText = newPrincipal.toFixed(2);
+        document.getElementById('GrossMonBenefits').innerText = grossBenefit.toFixed(2);
+        document.getElementById('PrinToPMTRatio').innerText = (PtoPRatio * 100).toFixed(2) + '%';
+        
     }
 
     // Calculate the Total Saving
     function TotalSaving() {
-        document.getElementById('Total_Savings').value = parseInt2(document.getElementById('New_Payments').value) - parseInt2(document.getElementById('CurrentPI').value);
+        document.getElementById('Total_Savings').value = parseFloat(parseInt2(document.getElementById('New_Payments').value)) - parseFloat(parseInt2(document.getElementById('CurrentPI').value));
     }
 
     // Calculate the Months Calculator
@@ -1572,5 +1650,91 @@
         // Event to calculate to month and days difference
         document.getElementById('Original_Loan_Date').addEventListener('change', () => { monthDiff(); daysDiff();});
         document.getElementById('CurrentDate').addEventListener('change', () => { monthDiff(); daysDiff();});
+
+        ['OriginalBalance', 'CurrentTerm', 'CurrentRate', 'NewLoanAmount', 'OfferedTerm', 'OfferedRate'].forEach(id => {
+            document.getElementById(id).addEventListener('change', () => { NewPayment(); });
+        });
+
     })();
 </script>
+
+
+
+
+
+Prefix
+AccountName
+CurrentDate
+LoanType
+Creditor
+Va Disability
+Current Lender
+Current Rate
+Current Term
+Current Product
+Offered Rate
+Offered Term
+Offered Product
+Original Loan Date
+Original Balance
+Current Balance
+Monthly Payment
+Current PI
+Escrows
+New Loan Amount
+Total PmtEsc
+New Payments
+Total Savings
+FirstName
+LastName
+PhoneNumber
+MobileNumber
+Email
+Address
+AddressType
+Period
+City
+State
+Zip
+Address2
+AddressType2
+Period2
+City2
+State2
+Zip2
+Address3
+AddressType3
+Period3
+City3
+State3
+Zip3
+Marital Status
+Dependents
+Ages
+Social Security
+DOB
+Retired
+Retired Period
+Ficos
+Branch
+Years Served
+Current Employer
+Current Employer Period
+Current Employer Address
+Current Employer Phone
+Prior Employer
+Prior Employer Period
+Prior Employer Address
+Prior Employer Phone
+Co Borrower FirstName
+Co Borrower LastName
+Co Borrower PhoneNumber
+Co Borrower Email
+Co Borrower Social Security
+Co Borrower Ficos
+Co Borrower DOB
+Co Borrower Retired
+Co Borrower Period
+Appointment Date
+Appointment Time
+Special Instructions
