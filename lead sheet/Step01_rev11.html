@@ -310,7 +310,7 @@
                                             <b>NEW PAYMENTS:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="New Payments" name="New Payments" value="(#New Payments#)" id="New_Payments">
+                                            <input type="text" control="input" class="form-control" field-name="New Payments" name="New Payments" value="(#New Payments#)" id="NewPayments">
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +320,7 @@
                                             <b style="color: #00b050">TOTAL SAVINGS:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Total Savings" name="Total Savings" value="(#Total Savings#)" style="color: #00b050" id="Total_Savings">
+                                            <input type="text" control="input" class="form-control" field-name="Total Savings" name="Total Savings" value="(#Total Savings#)" style="color: #00b050" id="TotalSavings">
                                         </div>
                                     </div>
                                 </div>
@@ -328,7 +328,33 @@
 
                             <!-- Tenth Row -->
                             <div class="row">
-                                <div class="col-sm-6"></div>
+                                <div class="col-sm-12"><hr></div>
+                                <div class="col-sm-6">
+                                    <table class="table table-bordered text-center">
+                                        <thead>
+                                        <tr>
+                                            <th class="bg-light-blue">(Delete After Used)</th>
+                                            <th class="bg-light-grey">ESCROWS Calculator</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="text-right">TAX:</td>
+                                            <td>
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Tax" name="Tax" value="(#Tax#)" id="Tax">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">INSURANCE:</td>
+                                            <td>$ 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">ESCROWS:</td>
+                                            <td>$ 0</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                                 <div class="col-sm-6">
                                     <table class="table table-bordered text-center">
                                         <thead>
@@ -341,14 +367,33 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td id="InterestSavings"></td>
-                                                <td id="AddtPrincipal"></td>
-                                                <td id="GrossMonBenefits"></td>
-                                                <td id="PrinToPMTRatio"></td>
+                                                <td id="InterestSavings">$ 0</td>
+                                                <td id="AddtPrincipal">$ 0</td>
+                                                <td id="GrossMonBenefits">$ 0</td>
+                                                <td id="PrinToPMTRatio">0%</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
+                                <div class="col-sm-6">
+                                    <table class="table table-bordered text-center">
+                                        <thead>
+                                        <tr>
+                                            <th class="bg-light-red" colspan="2">Months Calculator</th>
+                                            <th class="bg-light-red" colspan="2">Days Calculator</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td id="Months_Diff">0</td>
+                                            <td style="width: 150px">Months <br> Till Today</td>
+                                            <td id="Days_Diff">0</td>
+                                            <td style="width: 150px">Days <br> Till</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-sm-12"><hr></div>
                             </div>
                             <!--# END LOAN SECTION #-->
 
@@ -1003,49 +1048,6 @@
 
                                     <div class="col-sm-12"><br><br><br></div>
 
-                                    <div class="col-sm-6">
-                                        <table class="table table-bordered text-center">
-                                            <thead>
-                                            <tr>
-                                                <th class="bg-light-blue">(Delete After Used)</th>
-                                                <th class="bg-light-grey">ESCROWS Calculator</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td class="text-right">TAX:</td>
-                                                <td>2</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">INSURANCE:</td>
-                                                <td>2</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">ESCROWS:</td>
-                                                <td>2</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                    <div class="col-sm-6">
-                                        <table class="table table-bordered text-center">
-                                            <thead>
-                                            <tr>
-                                                <th class="bg-light-red" colspan="2">Months Calculator</th>
-                                                <th class="bg-light-red" colspan="2">Days Calculator</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td id="Months_Diff">0</td>
-                                                    <td style="width: 150px">Months <br> Till Today</td>
-                                                    <td id="Days_Diff">0</td>
-                                                    <td style="width: 150px">Days <br> Till</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
                                     <div class="col-sm-12 form-group">
                                         <button class="button">SAVE</button>
                                     </div>
@@ -1223,70 +1225,12 @@
     .leftSide select {
         background-color: #f5f5f5!important;
     }
-    
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
 
-    @media screen and (min-width: 768px) {
-        .rightSide {
-            padding-left: 0;
-            margin-top: 15px;
-        }
-    }
-
-    .leftSide {
-        padding-left: 0;
-        padding-right: 0;
-        max-height: 900px;
-        overflow-y: auto;
-        background-color: #f5f5f5;
-    }
-    
-    @media screen and (min-width: 992px) {
-        .rightSide {
-            width: calc( 100% - 630px);
-            padding-left: 0;
-        }
-        .leftSide {
-            width: 630px;
-        }
-    }
-    
     .col-sm-4 {
         width: 33.3%;
         float: left;
     }
-    
-    @media screen and (min-width: 468px) and (max-width: 768px) {
-        .rightSide {
-            width: 100%;
-            padding-left: 5px;
-            padding-right: 0;
-            margin-top: 0;
-            border-right: 10px solid #5a5c64;
-        }
-        .leftSide {
-            width: 100%;
-        }
-        .col-sm-6 {
-            width: 50%;
-            float: left;
-        }
-    }
-    
-    @media screen and (max-width: 468px) {
-        .rightSide {
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-top: 0;
-            border-right: 10px solid #5a5c64;
-        }
-    }
+
     
     .dynamic-form {
         background-color: #F5F6F6;
@@ -1307,12 +1251,6 @@
     .col-sm-6 {
         padding-left: 10px;
         padding-right: 10px;
-    }
-    
-    .rightSide {
-        height: 900px;
-        overflow-y: scroll;
-        overflow-x: hidden;
     }
 
     .button {
@@ -1341,28 +1279,6 @@
         -moz-box-shadow: 0 3px 10px 2px rgba(175, 175, 175, 0.9);
         box-shadow: 0 3px 10px 2px rgba(175, 175, 175, 0.9);
     }
-    
-    .next,
-    .submit,
-    .submitnav {
-        margin-left: 20px;
-    }
-    
-    .next,
-    .submit {
-        margin-right: 30px;
-    }
-    
-    .next,
-    .submit,
-    .pre,
-    .submitnav {
-        margin-top: 15px;
-    }
-    
-    .submit {
-        float: left;
-    }
 
     textarea {
         width: calc(100%)!important;
@@ -1389,18 +1305,6 @@
         color: black;
     }
     /* 8 / 24 */
-    
-    .plan {
-        display: inline-block;
-        float: left;
-        font-size: 16px;
-        color: black;
-        padding-left: 0;
-        border-bottom: none!important;
-        width: 50%;
-        font-size: 16px!important;
-    }
-
     /* New Styles Here */
     /* margins */
     .m-0{margin: 0!important;}
@@ -1497,6 +1401,10 @@
     .text-underline {
         text-decoration: underline;
     }
+
+    .no-border-bottom {
+        border-bottom: 0!important;
+    }
 </style>
 
 <script type="text/javascript">
@@ -1512,7 +1420,7 @@
     
     // Calculate the Total PmtEsc
     function TotalPmtEsc() {
-        document.getElementById('Total_PmtEsc').value = parseFloat(parseInt2(document.getElementById('New_Payments').value)) + parseFloat(parseInt2(document.getElementById('Escrows').value));
+        document.getElementById('Total_PmtEsc').value = parseFloat(parseInt2(document.getElementById('NewPayments').value)) + parseFloat(parseInt2(document.getElementById('Escrows').value));
     }
 
     function calPMT(ir, np, pv) {
@@ -1595,12 +1503,13 @@
         document.getElementById('AddtPrincipal').innerText = newPrincipal.toFixed(2);
         document.getElementById('GrossMonBenefits').innerText = grossBenefit.toFixed(2);
         document.getElementById('PrinToPMTRatio').innerText = (PtoPRatio * 100).toFixed(2) + '%';
-        
+
+        document.getElementById('NewPayments').innerText = newPayment.toFixed(2);
     }
 
     // Calculate the Total Saving
     function TotalSaving() {
-        document.getElementById('Total_Savings').value = parseFloat(parseInt2(document.getElementById('New_Payments').value)) - parseFloat(parseInt2(document.getElementById('CurrentPI').value));
+        document.getElementById('TotalSavings').value = parseFloat(parseInt2(document.getElementById('NewPayments').value)) - parseFloat(parseInt2(document.getElementById('CurrentPI').value));
     }
 
     // Calculate the Months Calculator
@@ -1640,12 +1549,12 @@
 
         // Event to calculate the Total PmtEsc
         document.getElementById('Escrows').addEventListener('change', TotalPmtEsc);
-        document.getElementById('New_Payments').addEventListener('change', TotalPmtEsc);
+        document.getElementById('NewPayments').addEventListener('change', TotalPmtEsc);
 
 
         // Event to calculate to TotalSavings
         document.getElementById('CurrentPI').addEventListener('change', TotalSaving);
-        document.getElementById('New_Payments').addEventListener('change', TotalSaving);
+        document.getElementById('NewPayments').addEventListener('change', TotalSaving);
 
         // Event to calculate to month and days difference
         document.getElementById('Original_Loan_Date').addEventListener('change', () => { monthDiff(); daysDiff();});
