@@ -341,19 +341,19 @@
                                         <tr>
                                             <td class="text-right">TAX:</td>
                                             <td>
-                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Tax" name="Tax" value="(#Tax#)" id="Tax">
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Tax" name="Tax" value="0" id="Tax">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="text-right">INSURANCE:</td>
                                             <td>
-                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Insurance" name="Insurance" value="(#Insurance#)" id="Insurance">
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Insurance" name="Insurance" value="0" id="Insurance">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="text-right">ESCROWS:</td>
                                             <td>
-                                                <input type="text" control="input" class="form-control text-center no-border-bottom"  id="CalculatedEscrows">
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom"  id="CalculatedEscrows" value="0">
                                             </td>
                                         </tr>
                                         </tbody>
@@ -1529,11 +1529,8 @@
         if (isValidDate(d1) && isValidDate(d2)){
             months = (d2.getFullYear() - d1.getFullYear()) * 12;
             months -= d1.getMonth();
-            months += d2.getMonth();
+            months += d2.getMonth() - 1;
         }
-
-        if ((d2.getTime() - d1.getTime()) / (1000 * 3600 * 24) < 30)
-            months -= 1;
 
         document.getElementById('Months_Diff').innerText = months < 0 ? 0: months;
     }
