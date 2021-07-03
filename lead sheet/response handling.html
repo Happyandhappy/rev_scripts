@@ -32,7 +32,10 @@
             </div>
 
             <input type="hidden" value="https://dvincienergy.leadspediatrack.com/post.do?lp_campaign_id=60db4ce5d42b6&lp_campaign_key=GXKyw3RD4pcQxC897vVF&lp_response=JSON&lp_caller_id=16154482247&first_name=Test&last_name=Test" id="URL">
-
+            <input type="hidden" value="(#Appointment Date#)" id="AppointmentDate">
+            <input type="hidden" value="(#Appointment Time Hrs#)" id="AppointmentTimeHrs">
+            <input type="hidden" value="(#Appointment Time Min#)" id="AppointmentTimeMin">
+            <input type="hidden" value="(#Appointment Time AM/PM#)" id="AppointmentTime">
         </div>
     </body>
 </html>
@@ -83,17 +86,26 @@
         document.getElementById('modal-header').classList.remove('success');
         document.getElementById('modal-header').classList.add(res.result);
 
+        const AppointmentDate = document.getElementById('AppointmentDate').value;
+        const AppointmentTimeHrs = document.getElementById('AppointmentTimeHrs').value;
+        const AppointmentTimeMin = document.getElementById('AppointmentTimeMin').value;
+        const AppointmentTime = document.getElementById('AppointmentTime').value;
+
         if (res.result === 'success'){
-            document.getElementById('msg').innerHTML = 'The Lead has been delivered to the client <br> Buyer: ' + res.advertisers[0].advertiser.advertiserName;
+            var msg = 'The Lead has been delivered to the client <br> Buyer: ' + res.advertisers[0].advertiser.advertiserName + '<br>' + res.advertisers[0].advertiser.agentMessage;
+
             if (res.advertisers[0].advertiser.transfer_number !== ''){
                 document.getElementById('modal-title').innerText = 'Live Transfer';
 
                 // copy the transfer_number to clipboard here.
-                CopyToClipboard("chase:conference_call#" + res.advertisers[0].advertiser.transfer_number.substring(1))
-
+                CopyToClipboard("chase:conference_call#" + res.advertisers[0].advertiser.transfer_number.substring(1));
             } else {
                 document.getElementById('modal-title').innerText = 'Lead Deliverd';
+                msg += `<br><br> Appointments Closing: Great you are all set for ${AppointmentDate}  at ${AppointmentTimeHrs}:${AppointmentTimeMin} ${AppointmentTime}.<br>`
+                    + `You will be receiving a follow up from ${res.advertisers[0].advertiser.advertiserName}.`;
             }
+
+            document.getElementById('msg').innerHTML = msg;
         } else {
             document.getElementById('modal-title').innerText = 'Post Failed';
             document.getElementById('msg').innerHTML = 'Lead Rejected <br> No Match';
