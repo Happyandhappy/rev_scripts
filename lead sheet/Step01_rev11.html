@@ -1562,7 +1562,7 @@
         const oriDay = OriginalLoanDate.split('-')[2];
         const oriMonth = OriginalLoanDate.split('-')[1];
         const oriYear = OriginalLoanDate.split('-')[0];
-        var loanDay, loanMonth, loanYear;
+        var loanDay, loanMonth, loanYear, init = true;
 
         rateData.forEach(item => {
             // compare two dates
@@ -1573,10 +1573,12 @@
             if (parseInt(loanDay) === parseInt(oriDay) && parseInt(loanMonth) === parseInt(oriMonth) && parseInt(loanYear) === parseInt(oriYear)){
                 document.getElementById('CurrentRate').value = item['rate'];
                 NewPayment();
+                init = false;
             }
         });
 
-        return 0;
+        if (init)
+            document.getElementById('CurrentRate').value = 0;
     }
     
     (function () {
