@@ -18,9 +18,9 @@
                         <h3 class="text-center mb-5">Lead Sheet</h3>
                         <form control="form" class="dynamic-form" id="form" onsubmit="alert('Saved!');">
 
-                            <input type="hidden" name="CurrentDate" field-name="CurrentDate" value="(#CurrentDate#)" id="CurrentDate1" />
-                            <input type="hidden" name="Closing Date" field-name="Closing Date" value="(#Closing Date#)" id="ClosingDate1" />
-                            <input type="hidden" name="Appointment Date" field-name="Appointment Date" value="(#Appointment Date#)"  id="AppointmentDate1" />
+                            <input type="hidden" class="CurrentDate1" name="CurrentDate" field-name="CurrentDate" value="(#CurrentDate#)" />
+                            <input type="hidden" class="ClosingDate1" name="Closing Date" field-name="Closing Date" value="(#Closing Date#)"/>
+                            <input type="hidden" class="AppointmentDate1" name="Appointment Date" field-name="Appointment Date" value="(#Appointment Date#)" />
 
                             <!--First Row-->
                             <div class="row">
@@ -52,7 +52,7 @@
                                             <b>DATE:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="date" control="input" class="form-control" field-name="CurrentDate2" name="CurrentDate2" value="(#CurrentDate#)" id="CurrentDate2">
+                                            <input type="date" class="form-control CurrentDate2" name="CurrentDate2" value="(#CurrentDate#)">
                                         </div>
                                     </div>
                                 </div>
@@ -139,7 +139,7 @@
                                                     CURRENT RATE:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="MTG_RATE" name="MTG_RATE" value="(#MTG_RATE#)" id="CurrentRate" disabled>
+                                                    <input type="text" control="input" class="form-control MTG_RATE" field-name="MTG_RATE" name="MTG_RATE" value="(#MTG_RATE#)" disabled="1">
                                                 </div>
                                             </div>
                                         </div>
@@ -149,7 +149,7 @@
                                                     TERM:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="Current Term" name="Current Term" value="(#Term1#)" id="CurrentTerm">
+                                                    <input type="text" control="input" class="form-control CurrentTerm" field-name="Current Term" name="Current Term" value="(#Current Term#)">
                                                 </div>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@
                                                     PRODUCT:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <select field-name="Current Product" class="form-control" name="Current Product" id="CurrentProduct">
+                                                    <select field-name="Current Product" class="form-control CurrentProduct" name="Current Product">
                                                         <option value="(#Current Product#)" selected="" hidden="">(#Current Product#)</option>
                                                         <option value="FIXED">FIXED</option>
                                                         <option value="3/1 ARM">3/1 ARM</option>
@@ -177,7 +177,7 @@
                                                     OFFERED RATE:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="Offered Rate" name="Offered Rate" value="(#Offered Rate#)" id="OfferedRate">
+                                                    <input type="text" control="input" class="form-control OfferedRate" field-name="Offered Rate" name="Offered Rate" value="(#Offered Rate#)">
                                                 </div>
                                             </div>
                                         </div>
@@ -187,17 +187,17 @@
                                                     TERM:
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <input type="text" control="input" class="form-control" field-name="Offered Term" name="Offered Term" value="(#Offered Term#)" id="OfferedTerm">
+                                                    <input type="text" control="input" class="form-control OfferedTerm" field-name="Offered Term" name="Offered Term" value="(#Offered Term#)">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
                                             <div class="row">
                                                 <div class="col-sm-6 text-right">
-                                                    PRODUCT:
+                                                    <p>PRODUCT1:</p>
                                                 </div>
                                                 <div class="col-sm-6">
-                                                    <select field-name="Offered Product" class="form-control" name="Offered Product"  id="OfferedProduct">
+                                                    <select field-name="Offered Product" class="form-control OfferedProduct" name="Offered Product">
                                                         <option value="(#Offered Product#)" selected="" hidden="">(#Offered Product#)</option>
                                                         <option value="FIXED">FIXED</option>
                                                         <option value="3/1 ARM">3/1 ARM</option>
@@ -218,7 +218,7 @@
                                             <b>* Closing Date:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="date" control="input" class="form-control" field-name="Closing Date2" name="Closing Date2" value="(#Closing Date#)" id="ClosingDate2">
+                                            <input type="date" class="form-control ClosingDate2" name="Closing Date2" value="(#Closing Date#)">
                                         </div>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
                                             <b>* Loan Amount:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Loan Amount" name="Loan Amount" value="(#Loan Amount#)" id="OriginalBalance">
+                                            <input type="text" control="input" class="form-control LoanAmount" field-name="Loan Amount" name="Loan Amount" value="(#Loan Amount#)">
                                         </div>
                                     </div>
                                 </div>
@@ -242,7 +242,7 @@
                                             <b>* CURRENT BALANCE:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="Current Balance" name="Current Balance" value="(#Current Balance#)" id="CurrentBalance">
+                                            <input type="text" control="input" class="form-control CurrentBalance" field-name="Current Balance" name="Current Balance" value="(#Current Balance#)">
                                         </div>
                                     </div>
                                 </div>
@@ -252,7 +252,7 @@
                                             <b>MONTHLY PAYMENT:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Monthly Payment" name="Monthly Payment" value="(#Monthly Payment#)" id="Monthly_Payment" disabled>
+                                            <input type="text" control="input" class="form-control MonthlyPayment" field-name="Monthly Payment" name="Monthly Payment" value="(#Monthly Payment#)" disabled="1">
                                         </div>
                                     </div>
                                 </div>
@@ -266,7 +266,7 @@
                                             <b>CURRENT P and I:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="Current PI" name="Current PI" value="(#Current PI#)" id="CurrentPI">
+                                            <input type="text" control="input" class="form-control CurrentPI" field-name="Current PI" name="Current PI" value="(#Current PI#)">
                                         </div>
                                     </div>
                                 </div>
@@ -276,7 +276,7 @@
                                             <b>*ESCROWS:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Escrows" name="Escrows" value="(#Escrows#)" id="Escrows">
+                                            <input type="text" control="input" class="form-control Escrows" field-name="Escrows" name="Escrows" value="(#Escrows#)" id="Escrows">
                                         </div>
                                     </div>
                                 </div>
@@ -290,7 +290,7 @@
                                             <b>NEW LOAN AMOUNT:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="New Loan Amount" name="New Loan Amount" value="(#New Loan Amount#)" id="NewLoanAmount">
+                                            <input type="text" control="input" class="form-control NewLoanAmount" field-name="New Loan Amount" name="New Loan Amount" value="(#New Loan Amount#)">
                                         </div>
                                     </div>
                                 </div>
@@ -300,7 +300,7 @@
                                             <b>TOTAL PMT W/ ESC:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Total PmtEsc" name="Total PmtEsc" value="(#Total PmtEsc#)" id="Total_PmtEsc">
+                                            <input type="text" control="input" class="form-control TotalPmtEsc" field-name="Total PmtEsc" name="Total PmtEsc" value="(#Total PmtEsc#)">
                                         </div>
                                     </div>
                                 </div>
@@ -314,7 +314,7 @@
                                             <b>NEW PAYMENTS:</b>
                                         </div>
                                         <div class="col-sm-6">
-                                            <input type="text" control="input" class="form-control" field-name="New Payments" name="New Payments" value="(#New Payments#)" id="NewPayments">
+                                            <input type="text" control="input" class="form-control NewPayments" field-name="New Payments" name="New Payments" value="(#New Payments#)">
                                         </div>
                                     </div>
                                 </div>
@@ -324,7 +324,7 @@
                                             <b style="color: #00b050">TOTAL SAVINGS:</b>
                                         </div>
                                         <div class="col-sm-6 form-group">
-                                            <input type="text" control="input" class="form-control" field-name="Total Savings" name="Total Savings" value="(#Total Savings#)" style="color: #00b050" id="TotalSavings">
+                                            <input type="text" control="input" class="form-control TotalSavings" field-name="Total Savings" name="Total Savings" value="(#Total Savings#)" style="color: #00b050">
                                         </div>
                                     </div>
                                 </div>
@@ -345,19 +345,19 @@
                                         <tr>
                                             <td class="text-right">TAX:</td>
                                             <td>
-                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Tax" name="Tax" value="0" id="Tax">
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom Tax" field-name="Tax" name="Tax" value="0" id="Tax">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="text-right">INSURANCE:</td>
                                             <td>
-                                                <input type="text" control="input" class="form-control text-center no-border-bottom" field-name="Insurance" name="Insurance" value="0" id="Insurance">
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom Insurance" field-name="Insurance" name="Insurance" value="0" id="Insurance">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="text-right">ESCROWS:</td>
                                             <td>
-                                                <input type="text" control="input" class="form-control text-center no-border-bottom"  id="CalculatedEscrows" value="0">
+                                                <input type="text" control="input" class="form-control text-center no-border-bottom CalculatedEscrows" name="CalculatedEscrows" value="0">
                                             </td>
                                         </tr>
                                         </tbody>
@@ -1031,7 +1031,7 @@
                                                 <b>APPOINTMENT DATE:</b>
                                             </div>
                                             <div class="col-sm-6">
-                                                <input type="date" control="input" class="form-control" field-name="Appointment Date2" name="Appointment Date2" value="(#Appointment Date#)" id="AppointmentDate2">
+                                                <input type="date" control="input" class="form-control AppointmentDate2" name="Appointment Date2" value="(#Appointment Date#)" id="AppointmentDate2">
                                             </div>
                                         </div>
                                     </div>
@@ -1057,7 +1057,7 @@
                                     <div class="col-sm-12"><br><br><br></div>
 
                                     <div class="col-sm-12 form-group text-center">
-                                        <input type="submit" control="submit" action="submit" value="Submit" class="button">
+                                        <input type="submit" control="submit" action="submit" value="Submit">
                                     </div>
                                 </div>
                             </div>
